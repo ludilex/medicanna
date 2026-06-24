@@ -1,4 +1,4 @@
-﻿
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,12 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- ============================================================= -->
-<!--  PITCH WEB · TESISTECH → JOYCE (prospecto: Magui Uribe)        -->
+<!--  PITCH WEB · TESISTECH → MED&CANNA (contacto: Santiago Gallegos) -->
 <!--  Cotizador: precios en "✏️ PRECIO" cerca del final            -->
 <!-- ============================================================= -->
 
-<title>Tesistech para Joyce — Propuesta</title>
-<meta name="description" content="Propuesta de Tesistech para Joyce: un mundo de marca cohesivo que venda igual de bien en cada canal.">
+<title>Tesistech para Med&amp;Canna — Propuesta de Tienda Online</title>
+<meta name="description" content="Propuesta de Tesistech para Med&amp;Canna: la tienda online de clase mundial, bilingüe y premium, que lanza su primera colección de CBD de lujo.">
 
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,75 +87,59 @@ section.block{padding:84px 0;}
 .opp .lead{font-family:var(--font-display);font-weight:600;font-size:18px;color:#fff;}
 .opp .txt{color:#9FB2C2;font-size:14px;margin-top:7px;}
 
-/* planes */
-.plans-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
-.plan{display:flex;flex-direction:column;padding:30px 28px;position:relative;}
-.plan .badge{position:absolute;top:-11px;left:28px;font-family:var(--font-display);font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:#fff;background:var(--brand);padding:5px 11px;border-radius:999px;}
-.plan .pname{font-family:var(--font-display);font-weight:600;font-size:22px;}
-.plan .pfor{color:var(--ink-2);font-size:13.5px;margin:7px 0 16px;}
-.plan .price-setup{font-size:12.5px;color:var(--ink-2);}
-.plan .price-mo{font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--ink);margin-top:2px;}
-.plan .price-mo small{font-family:var(--font-body);font-size:13px;font-weight:500;color:var(--ink-2);}
-.plan .pdiv{height:1px;background:var(--line);margin:18px 0;}
-.plan .feat{list-style:none;margin:0 0 8px;display:flex;flex-direction:column;gap:10px;}
-.plan .feat li{position:relative;padding-left:24px;font-size:13.5px;color:var(--ink-2);}
-.plan .feat li::before{content:"";position:absolute;left:0;top:5px;width:12px;height:12px;border-radius:50%;border:2px solid var(--brand);}
-.plan.rec{border-color:var(--brand);box-shadow:0 18px 44px -18px rgba(19,146,209,.5);}
+/* La Cava */
+.fases-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.phase-badge{display:inline-flex;font-family:var(--font-display);font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--brand-600);background:rgba(19,146,209,.10);padding:5px 11px;border-radius:999px;margin-bottom:14px;}
+.phase-badge.alt{color:var(--ink-2);background:rgba(12,22,34,.06);}
+.phase-time{font-size:12px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px solid var(--line);}
 
-.addon{margin-top:22px;background:linear-gradient(180deg,rgba(19,146,209,.07),transparent);border:1px solid var(--brand-300);border-radius:var(--radius);padding:24px 26px;display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;justify-content:space-between;}
-.addon .ah{font-family:var(--font-display);font-weight:600;font-size:18px;}
-.addon .ap{color:var(--ink-2);font-size:14px;margin-top:6px;max-width:62ch;}
-.addon .aprice{font-family:var(--font-display);font-weight:700;font-size:24px;color:var(--brand-600);white-space:nowrap;}
-.addon .aprice small{display:block;font-family:var(--font-body);font-size:12px;color:var(--ink-2);font-weight:500;}
-.ref-logos{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:18px;}
-.amaro-card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 18px;}
-.amaro-card .amaro-lbl{font-family:var(--font-display);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-bottom:7px;}
-.amaro-card img{height:50px;width:auto;display:block;}
-.bni-badge{display:inline-flex;align-items:center;gap:11px;background:#6B0000;border-radius:10px;padding:10px 16px;}
-.bni-badge img{height:38px;width:auto;}
-.bni-badge span{font-family:var(--font-display);font-size:11px;font-weight:600;color:#fff;letter-spacing:.08em;text-transform:uppercase;}
-.bni-disc{font-size:12px;color:var(--ink-2);margin-top:12px;line-height:1.55;max-width:52ch;}
-.ugc-prices{display:flex;gap:22px;flex-wrap:wrap;justify-content:flex-end;margin-top:4px;}
-.ugc-prices .aprice{font-size:20px;}
+/* roadmap */
+.roadmap{display:flex;flex-direction:column;max-width:760px;}
+.rm-step{position:relative;display:flex;gap:22px;padding-bottom:36px;}
+.rm-step:last-child{padding-bottom:0;}
+.rm-step::before{content:"";position:absolute;left:21px;top:46px;bottom:-2px;width:2px;background:var(--line);}
+.rm-step:last-child::before{display:none;}
+.rm-num{flex:none;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff;font-family:var(--font-display);font-weight:700;font-size:16px;display:grid;place-items:center;position:relative;z-index:1;box-shadow:0 8px 20px -8px rgba(19,146,209,.6);}
+.rm-body{flex:1;padding-top:5px;min-width:0;}
+.rm-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.rm-title{font-family:var(--font-display);font-weight:600;font-size:17px;}
+.rm-time{font-family:var(--font-display);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--brand-600);background:rgba(19,146,209,.08);padding:4px 10px;border-radius:999px;white-space:nowrap;}
+.rm-lead{font-size:14px;color:var(--ink);margin-top:6px;max-width:54ch;}
+.rm-list{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-direction:column;gap:7px;}
+.rm-list li{position:relative;padding-left:22px;font-size:13.5px;color:var(--ink-2);}
+.rm-list li::before{content:"";position:absolute;left:0;top:5px;width:13px;height:13px;border-radius:4px;border:2px solid var(--brand-300);}
 
-/* version selector */
-.version-bar{background:var(--surface);border:2px solid rgba(19,146,209,.18);border-radius:18px;padding:22px 28px;margin:0 auto 44px;max-width:700px;text-align:center;box-shadow:0 4px 24px -10px rgba(19,146,209,.12);}
-.version-bar .vb-label{font-family:var(--font-display);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);margin-bottom:14px;}
-.vtabs{display:inline-flex;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:4px;gap:4px;}
-.vtab{background:transparent;border:none;border-radius:7px;padding:10px 22px;font-family:var(--font-display);font-size:14px;font-weight:600;color:var(--ink-2);cursor:pointer;transition:all .18s;}
-.vtab.active{background:var(--brand);color:#fff;box-shadow:0 2px 10px -2px rgba(19,146,209,.4);}
-.vtab:not(.active):hover{background:rgba(19,146,209,.07);color:var(--ink);}
-.vb-hint{font-size:13px;color:var(--ink-2);margin-top:12px;min-height:20px;}
-body.version-2 .hide-v2{display:none!important;}
-body:not(.version-2) .show-v2{display:none!important;}
-@media(max-width:600px){.vtabs{flex-direction:column;}.vtab{padding:10px 16px;font-size:13px;}}
-
-/* cotizador */
-.config{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:34px 32px;box-shadow:var(--shadow);}
+/* cotizador modular */
+.config{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:34px 32px;box-shadow:var(--shadow);}
 .cfg-label{font-family:var(--font-display);font-weight:600;font-size:13px;letter-spacing:.03em;color:var(--ink);margin:0 0 12px;display:block;}
+.mod-group-title{font-family:var(--font-display);font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin:26px 0 4px;}
+.mod-group-title:first-child{margin-top:0;}
+.mod-row{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);}
+.mod-row:last-of-type{border-bottom:none;}
+.mod-info{flex:1;min-width:0;}
+.mod-name{font-family:var(--font-display);font-weight:600;font-size:14px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
+.mod-price{font-family:var(--font-display);font-size:12.5px;color:var(--brand-600);font-weight:600;}
+.mod-badge{font-family:var(--font-display);font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--brand);padding:3px 9px;border-radius:999px;}
+.mod-desc{font-size:12.5px;color:var(--ink-2);margin-top:4px;max-width:48ch;}
+.mod-right{display:flex;align-items:center;gap:10px;flex:none;}
+.qty-select{font-family:var(--font-display);font-weight:600;font-size:13px;border:1px solid var(--line);border-radius:8px;padding:6px 8px;background:var(--bg);color:var(--ink);}
+.qty-select:disabled{opacity:.4;}
 .segmented{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;}
 .seg{font-family:var(--font-display);font-weight:600;font-size:13px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg);cursor:pointer;color:var(--ink-2);transition:all .18s;line-height:1.3;}
 .seg small{display:block;font-family:var(--font-body);font-size:11px;font-weight:400;opacity:.72;margin-top:2px;}
 .seg.active small{opacity:.85;}
-.vpill{font-family:var(--font-display);font-size:11px;font-weight:600;color:var(--brand-600);background:rgba(19,146,209,.1);border-radius:6px;padding:3px 9px;letter-spacing:.03em;white-space:nowrap;}
 .seg:hover{border-color:var(--brand-300);}
 .seg.active{background:var(--brand);color:#fff;border-color:var(--brand);box-shadow:0 8px 20px -8px rgba(19,146,209,.6);}
-.toggle-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:24px;}
-.toggle-row .tl{font-family:var(--font-display);font-weight:600;font-size:14px;}
-.toggle-row .tt{font-size:12px;color:var(--ink-2);margin-top:3px;max-width:42ch;}
+.defer-row{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:24px;padding-top:20px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.defer-row .tl{font-family:var(--font-display);font-weight:600;font-size:14px;}
+.defer-row .tt{font-size:12px;color:var(--ink-2);margin-top:3px;max-width:42ch;}
+.defer-row .segmented{margin:0;}
 .switch{position:relative;width:46px;height:26px;flex:none;}
 .switch input{opacity:0;width:0;height:0;}
 .switch .track{position:absolute;inset:0;background:var(--line);border-radius:999px;transition:.2s;cursor:pointer;}
 .switch .track::before{content:"";position:absolute;width:20px;height:20px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,.25);}
 .switch input:checked + .track{background:var(--brand);}
 .switch input:checked + .track::before{transform:translateX(20px);}
-.slider-row{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:10px;}
-.slider-row .val{font-family:var(--font-display);font-weight:700;font-size:28px;color:var(--brand-600);white-space:nowrap;}
-.slider-row .val small{font-family:var(--font-body);font-size:13px;color:var(--ink-2);font-weight:500;}
-input[type=range].slider{flex:1;-webkit-appearance:none;appearance:none;height:6px;border-radius:999px;background:linear-gradient(90deg,var(--brand) var(--p,30%),var(--line) var(--p,30%));outline:none;}
-input[type=range].slider::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid var(--brand);box-shadow:0 2px 8px rgba(12,22,34,.2);cursor:pointer;}
-input[type=range].slider::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#fff;border:3px solid var(--brand);cursor:pointer;}
-.ppv{font-size:12.5px;color:var(--ink-2);margin-top:10px;}
 .summary{background:var(--ink);color:#EAF1F7;border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;}
 .summary h3{color:#fff;font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-display);}
 .gh{font-family:var(--font-display);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#9FB2C2;margin:18px 0 2px;}
@@ -165,11 +149,13 @@ input[type=range].slider::-moz-range-thumb{width:20px;height:20px;border-radius:
 .sumtot .lbl{font-size:13px;color:#B8C6D4;}
 .sumtot .t{font-family:var(--font-display);font-weight:700;font-size:22px;color:#fff;}
 .sumtot .t small{font-size:12px;color:#9FB2C2;font-weight:500;font-family:var(--font-body);}
-.pieces{font-size:12px;color:#9FB2C2;margin-top:8px;}
 .summary .btn{margin-top:18px;justify-content:center;}
 .summary .mini{background:transparent;border:1px solid rgba(255,255,255,.25);color:#fff;margin-top:10px;}
 .summary .mini:hover{border-color:var(--brand-300);color:var(--brand-300);transform:translateY(-2px);}
 .disc{font-size:11px;color:#8094A6;margin-top:14px;line-height:1.5;}
+.disc-list{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:5px;}
+.disc-list li{position:relative;padding-left:13px;font-size:11px;color:#8094A6;line-height:1.5;}
+.disc-list li::before{content:"–";position:absolute;left:0;}
 
 .cta-final{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;}
 .cta-final h2{font-size:clamp(30px,4vw,46px);}
@@ -192,7 +178,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
 .d1{transition-delay:.06s}.d2{transition-delay:.14s}.d3{transition-delay:.24s}.d4{transition-delay:.34s}
 
 @media (max-width:900px){
-  .cards,.opp,.plans-grid,.config,.cta-final{grid-template-columns:1fr;}
+  .cards,.opp,.config,.cta-final,.fases-grid{grid-template-columns:1fr;}
   .ring,.hero .glow{opacity:.3;}
   .dark,.results{padding:38px 26px;}
   /* header mobile */
@@ -219,7 +205,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   <div class="wrap bar">
     <a href="#" aria-label="Tesistech"><img src="logo-tesistech-transparente.png" alt="Tesistech" class="logo"></a>
     <div class="right">
-      <span class="tagfor" style="font-family:var(--font-display);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);">Propuesta para Joyce</span>
+      <span class="tagfor" style="font-family:var(--font-display);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);">Propuesta para Med&amp;Canna</span>
       <a class="btn btn-primary" href="#contacto">Hablemos</a>
     </div>
   </div>
@@ -234,19 +220,19 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
       <circle cx="100" cy="100" r="60" stroke="var(--brand-300)" stroke-width="2" stroke-dasharray="4 10" opacity=".7"/>
     </svg>
     <div class="wrap hero-inner">
-      <span class="eyebrow reveal in d1">Propuesta para Joyce · Preparada para Magui Uribe</span>
-      <h1 class="reveal in d2">El mundo de marca de Joyce, por fin <span class="hl">cohesivo</span>.</h1>
-      <p class="lede reveal in d3">Joyce hace calzado de piel de calidad para mujeres de 40 años en adelante, y ya vende en línea, en Liverpool y en SEARS. Te proponemos unir <b>web, redes, contenido, correo y pauta</b> en una sola voz — con una identidad de marca que comunique tus pilares en cada punto de contacto, y que venda igual de bien en todos.</p>
+      <span class="eyebrow reveal in d1">Propuesta para Med&amp;Canna · Preparada para Santiago Gallegos</span>
+      <h1 class="reveal in d2">La tienda online de <span class="hl">clase mundial</span> que merece Med&amp;Canna.</h1>
+      <p class="lede reveal in d3">Med&amp;Canna es cannabis CBD de lujo para quienes buscan rendimiento, alivio y bienestar sin comprometer estatus. No te proponemos un website informativo — te proponemos <b>una tienda online premium, bilingüe (ES/EN)</b>, con catálogo, carrito y checkout reales, dos colecciones —humanos y animales— y <b>La Cava</b>, una zona exclusiva para tus clientes VIP.</p>
       <div class="cta-row reveal in d4">
-        <a class="btn btn-primary" href="#planes">Ver propuesta
+        <a class="btn btn-primary" href="#solucion">Ver propuesta
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a class="btn btn-ghost" href="#cotizador">Armar el paquete</a>
+        <a class="btn btn-ghost" href="#cotizador-modular">Armar el paquete</a>
       </div>
       <div class="facts reveal in d4">
-        <div class="fact"><div class="n">Calzado de piel</div><div class="l">Producto premium para mujer 40+</div></div>
-        <div class="fact"><div class="n">Online + retail</div><div class="l">E-commerce, Liverpool y SEARS</div></div>
-        <div class="fact"><div class="n">FB + Instagram</div><div class="l">Presencia que hay que potenciar</div></div>
+        <div class="fact"><div class="n">Tienda online, no website</div><div class="l">Catálogo, carrito y checkout de clase mundial</div></div>
+        <div class="fact"><div class="n">Bilingüe ES · EN</div><div class="l">Pensado para turismo US/Canadá en PV, Cabos y Cancún</div></div>
+        <div class="fact"><div class="n">La Cava</div><div class="l">Zona VIP con acceso exclusivo para clientes top</div></div>
       </div>
     </div>
   </section>
@@ -256,24 +242,24 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="eyebrow">El problema</span>
-        <h2>Producto premium, comunicación fragmentada.</h2>
-        <p>Joyce tiene un producto que se vende solo en la mano de la clienta. El reto no es la calidad — es que cada canal cuenta una historia distinta.</p>
+        <h2>Una marca de lujo, todavía sin una tienda a su altura.</h2>
+        <p>Med&amp;Canna tiene producto, mockups y una visión de marca clara — pero hoy no existe una tienda online donde un cliente potencial pueda conocerla, confiar en ella y comprar.</p>
       </div>
       <div class="cards">
         <div class="card reveal">
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16M4 12h10M4 19h7" stroke-linecap="round"/></svg></div>
-          <h3>Una marca, muchas voces</h3>
-          <p>La web, las redes, los correos y la pauta no hablan igual. La identidad y los pilares de Joyce no se comunican de forma consistente.</p>
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18" stroke-linecap="round"/></svg></div>
+          <h3>Aún no existe una tienda online</h3>
+          <p>Sin catálogo, carrito ni checkout propios, no hay dónde dirigir a un cliente interesado ni dónde cerrar la primera venta.</p>
         </div>
         <div class="card reveal d1">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l6-6 4 4 7-7" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8h7v7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <h3>Esfuerzo sin medir</h3>
-          <p>Hay actividad en FB e Instagram, pero sin una estrategia integrada es difícil saber cuánto vende realmente cada peso invertido.</p>
+          <h3>Un producto de lujo necesita una tienda de lujo</h3>
+          <p>Un simple website informativo no respalda la calidad de Aura, Nocturnus, Invictus y Zenit. Sin una tienda de clase mundial, el precio premium es difícil de justificar ante el cliente.</p>
         </div>
         <div class="card reveal d2">
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a4 4 0 0 1 8 0v2" stroke-linecap="round"/></svg></div>
-          <h3>Dependencia del retail</h3>
-          <p>Vender en Liverpool y SEARS es valioso, pero el canal directo —de mayor margen y relación con la clienta— está subaprovechado.</p>
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l18-8-8 18-2-8-8-2z" stroke-linejoin="round"/></svg></div>
+          <h3>Anuncios sin un destino claro</h3>
+          <p>Sin una ficha de producto que venda y convierta dentro de la propia tienda, cualquier inversión en pauta se diluye antes de convertirse en venta.</p>
         </div>
       </div>
     </div>
@@ -285,19 +271,19 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
       <div class="dark reveal">
         <div class="glow"></div>
         <span class="eyebrow">La oportunidad</span>
-        <h2>Una marca tan cuidada como su calzado, vendiendo en automático.</h2>
+        <h2>Un mercado de alto poder adquisitivo, listo para una marca como Med&amp;Canna.</h2>
         <div class="opp">
           <div>
-            <div class="lead">Tu canal directo</div>
-            <div class="txt">Vender desde tu propia tienda deja mejor margen que la departamental, y te da la relación directa con tu clienta.</div>
+            <div class="lead">Turismo de alto poder adquisitivo</div>
+            <div class="txt">Puerto Vallarta, Los Cabos y Cancún reciben turistas estadounidenses y canadienses dispuestos a pagar por cannabis de calidad y confianza.</div>
           </div>
           <div>
-            <div class="lead">Una clienta que vuelve</div>
-            <div class="txt">La mujer 40+ valora la confianza de marca. Con correo y retargeting, la conviertes en clienta recurrente, no en una venta suelta.</div>
+            <div class="lead">Margen que sostiene el crecimiento</div>
+            <div class="txt">Con un margen de 70-80% en el producto estrella, hay espacio real para invertir en marca, contenido y pauta sin sacrificar rentabilidad.</div>
           </div>
           <div>
-            <div class="lead">Pauta que rinde más</div>
-            <div class="txt">Una identidad clara y creativos de alto impacto multiplican el efecto de cada peso en Meta. La piel de calidad es ideal para storytelling y video ads con avatares IA.</div>
+            <div class="lead">La Cava como motor de retención</div>
+            <div class="txt">Una zona VIP por invitación convierte a tus mejores clientes en embajadores recurrentes — referidos, ticket promedio y frecuencia de recompra, todo en un solo lugar.</div>
           </div>
         </div>
       </div>
@@ -309,186 +295,264 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="eyebrow">La solución</span>
-        <h2>Un solo sistema, no piezas sueltas.</h2>
-        <p>Tesistech opera todo el mundo de comunicación de Joyce conectado a un mismo objetivo: que la marca venda mejor en cada canal. Somos operadores, no teóricos.</p>
+        <h2>Una tienda online que vende, educa y fideliza.</h2>
+        <p>Tesistech construye la tienda online de clase mundial de Med&amp;Canna: catálogo, carrito y checkout reales, bilingüe, lista para recibir tráfico y convertirlo en clientes recurrentes — no un folleto digital.</p>
       </div>
       <div class="cards">
         <div class="card reveal">
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18" stroke-linecap="round"/></svg></div>
-          <h3>Identidad de marca y pilares</h3>
-          <p>La base estratégica: cómo se ve, suena y se siente Joyce en todos lados. De aquí parte toda la comunicación.</p>
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6" stroke-linecap="round"/></svg></div>
+          <h3>Tienda online completa, bilingüe</h3>
+          <p>Catálogo, carrito y checkout en español e inglés, con navegación fluida entre las colecciones humanos y animales — comercio real, no solo presencia digital.</p>
         </div>
         <div class="card reveal d1">
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l18-8-8 18-2-8-8-2z" stroke-linejoin="round"/></svg></div>
-          <h3>Paid media + social</h3>
-          <p>Campañas en Meta (FB + IG) gestionadas y medidas por ROAS, más una presencia orgánica con una sola voz.</p>
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16M4 12h10M4 19h7" stroke-linecap="round"/></svg></div>
+          <h3>Dos colecciones, una marca</h3>
+          <p>Humanos (Aura, Nocturnus, Invictus, Zenit) y animales, cada una con su propia sección dentro de la misma tienda de lujo.</p>
         </div>
         <div class="card reveal d2">
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M10 9l5 3-5 3V9z" fill="currentColor" stroke="none"/></svg></div>
-          <h3>Video Ads con IA</h3>
-          <p>Avatares IA con estilo UGC: creativos que detienen el scroll, en volumen y sin los tiempos de producción tradicional.</p>
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V8a5 5 0 0 1 10 0v3" stroke-linecap="round"/></svg></div>
+          <h3>La Cava: zona VIP</h3>
+          <p>Acceso por correo y contraseña para clientes top, basado en referidos, ticket de compra y frecuencia de recompra.</p>
         </div>
         <div class="card reveal">
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6" stroke-linecap="round"/></svg></div>
-          <h3>Web + correo</h3>
-          <p>Mejoramos tu sitio para que venda más y montamos correos promocionales que fidelizan a tu clienta.</p>
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l18-8-8 18-2-8-8-2z" stroke-linejoin="round"/></svg></div>
+          <h3>Listo para recibir pauta</h3>
+          <p>Cada anuncio aterriza directo en la página de producto correspondiente, sin fricción entre el clic y la compra.</p>
         </div>
         <div class="card reveal d1">
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3" stroke-linecap="round"/></svg></div>
-          <h3>Medición real</h3>
-          <p>Reportes con ROAS y ventas reales, no likes. Sabes exactamente qué funciona y qué escalar.</p>
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z" stroke-linejoin="round"/></svg></div>
+          <h3>Educación que rompe el estigma</h3>
+          <p>Contenido que explica el cannabis con seriedad y respaldo, igual en la tienda que en redes.</p>
         </div>
         <div class="card reveal d2">
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z" stroke-linejoin="round"/></svg></div>
-          <h3>Una sola voz</h3>
-          <p>De la web al feed, al correo y a la pauta: todo coherente con la identidad de Joyce.</p>
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Dirección de arte ya validada</h3>
+          <p>Partimos de los mockups con imágenes generadas con IA que ya capturan el concepto de lujo de Med&amp;Canna.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ SELECTOR DE VERSIÓN ============ -->
-  <div class="wrap" style="padding-top:0;padding-bottom:0;">
-    <div class="version-bar">
-      <div class="vb-label">Comparando propuestas</div>
-      <div class="vtabs" id="vtabs">
-        <button class="vtab active" data-v="1" type="button">Versión 1 · Todo incluido</button>
-        <button class="vtab" data-v="2" type="button">Versión 2 · Solo Meta Ads</button>
-      </div>
-      <div class="vb-hint" id="vbHint">Meta Ads + video ads con avatares IA incluidos en el plan mensual</div>
-    </div>
-  </div>
-
-  <!-- ============ PLANES SUGERIDOS ============ -->
-  <section class="block" id="planes" style="padding-top:0;">
+  <!-- ============ CÓMO FUNCIONA LA CAVA ============ -->
+  <section class="block" id="la-cava" style="padding-top:0;">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">Planes sugeridos para Joyce</span>
-        <h2>Por dónde recomendamos empezar.</h2>
-        <p>Dado que Joyce ya vende online y en retail y busca una comunicación integral, recomendamos arrancar en <b>Autopilot</b>, con la estrategia de identidad de marca como base.</p>
+        <span class="eyebrow">Cómo funciona La Cava</span>
+        <h2>Un privilegio que se gana, no una sección más.</h2>
+        <p>La Cava es la zona VIP de Med&amp;Canna: acceso por correo y contraseña, otorgado según el comportamiento del cliente —referidos, ticket de compra y frecuencia de recompra. No es un beneficio abierto a cualquiera; así reforzamos el posicionamiento de cannabis de lujo con sentido de pertenencia.</p>
       </div>
-      <div class="plans-grid">
-        <!-- ✏️ Plan Crecimiento -->
-        <div class="card plan reveal">
-          <div class="pname">Crecimiento</div>
-          <div class="pfor">Para empezar a ordenar y medir el crecimiento.</div>
-          <div class="price-setup">Setup $14,900 MXN</div>
-          <div class="price-mo" data-v1="9900" data-v2="5900">$9,900 <small>MXN / mes</small></div>
-          <div class="pdiv"></div>
-          <ul class="feat">
-            <li>Meta Ads gestionado (FB + IG)</li>
-            <li class="hide-v2">6 video ads con avatares IA/mes</li>
-            <li class="show-v2" style="color:var(--ink-2);font-size:13px;">Video ads IA disponibles como add-on ↓</li>
-            <li>Optimización quincenal · reporte con ROAS</li>
-            <li>Mejora de fichas y soporte web</li>
-          </ul>
+      <div class="fases-grid">
+        <div class="card reveal">
+          <div class="phase-badge">Fase 1 · Incluida en esta propuesta</div>
+          <h3>Lanzamiento: acceso por invitación</h3>
+          <p>El equipo de Med&amp;Canna marca manualmente a los clientes que califican. Ellos entran con su correo y contraseña a una página VIP con la misma dirección de arte de lujo del resto de la tienda.</p>
+          <p style="margin-top:10px;">Hoy Med&amp;Canna aún no tiene historial de ventas, así que todavía no hay datos de recompra que automatizar — empezamos simple, funcional y de lujo desde el día uno.</p>
+          <div class="phase-time">Listo junto con el lanzamiento de la tienda</div>
         </div>
-        <!-- ✏️ Plan Autopilot (recomendado) -->
-        <div class="card plan rec reveal d1">
-          <div class="badge">Recomendado para Joyce</div>
-          <div class="pname">Autopilot</div>
-          <div class="pfor">El mundo de marca completo, a máxima potencia.</div>
-          <div class="price-setup">Setup $19,900 MXN</div>
-          <div class="price-mo" data-v1="14900" data-v2="7900">$14,900 <small>MXN / mes</small></div>
-          <div class="pdiv"></div>
-          <ul class="feat">
-            <li>Embudo completo: prospección + retargeting + similares</li>
-            <li class="hide-v2">12 video ads con avatares IA/mes</li>
-            <li class="show-v2" style="color:var(--ink-2);font-size:13px;">Video ads IA disponibles como add-on ↓</li>
-            <li>Social media + email marketing automatizado</li>
-            <li>Mejora de sitio web · optimización semanal + A/B</li>
-            <li>Estrategia dedicada y reporte de ventas</li>
-          </ul>
+        <div class="card reveal d1">
+          <div class="phase-badge alt">Fase 2 · Cuando haya volumen</div>
+          <h3>Escalamiento: acceso automático</h3>
+          <p>Cuando existan suficientes clientes y compras repetidas, el acceso a La Cava se otorga solo —sin intervención manual— en cuanto el cliente cruza los umbrales de referidos, ticket o recompra que definamos juntos.</p>
+          <p style="margin-top:10px;">Se activa como parte del módulo de <b>Integraciones</b> del cotizador, cuando llegue el momento.</p>
+          <div class="phase-time">Se cotiza por separado, más adelante</div>
         </div>
       </div>
+      <p style="text-align:center;color:var(--ink-2);font-size:13.5px;margin-top:18px;">Las herramientas de automatización de Fase 2 tienen una cuota de suscripción mensual aparte — gasto operativo de Med&amp;Canna con el proveedor de la app, no con Tesistech. Te confirmamos el monto exacto al elegir la herramienta.</p>
+    </div>
+  </section>
 
-      <!-- ✏️ Add-on UGC (solo visible en Versión 2) -->
-      <div class="addon show-v2 reveal d1">
-        <div>
-          <div class="ah">Video Ads con avatares IA · add-on</div>
-          <div class="ap">Creativos estilo UGC generados con avatares de IA: sin actores ni producción, pero con el look que convierte en Meta Ads. Se contratan por separado y se suman al plan de gestión.</div>
-        </div>
-        <div class="ugc-prices">
-          <div><div class="aprice">$4,000<small>MXN/mes · 6 videos</small></div></div>
-          <div><div class="aprice">$7,000<small>MXN/mes · 12 videos</small></div></div>
-        </div>
+  <!-- ============ ROADMAP DE IMPLEMENTACIÓN ============ -->
+  <section class="block" id="roadmap" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Cómo lo construimos</span>
+        <h2>Sabrás exactamente qué recibes — y cuándo.</h2>
+        <p>Nada de promesas vagas ni "ya casi está". Somos una agencia de e-commerce de clase mundial y este es nuestro proceso para construir tiendas premium: cada semana tiene un entregable que puedes ver, tocar y aprobar — hasta que Med&amp;Canna esté en vivo.</p>
       </div>
-
-      <!-- ✏️ Complemento estratégico -->
-      <div class="addon reveal d2">
-        <div style="flex:1;min-width:0;">
-          <div class="ah">Estrategia integral de identidad de marca y pilares</div>
-          <div class="ap">La base de todo: definimos cómo se ve, suena y se siente Joyce, y sus pilares de marca, para que cada canal comunique lo mismo. Es la pieza que vuelve cohesivo todo el sistema.</div>
-          <div class="ref-logos">
-            <div class="amaro-card">
-              <div class="amaro-lbl">Realizado por</div>
-              <img src="estudio-amaro-logo.png" alt="Estudio Amaro">
-            </div>
-            <div class="bni-badge">
-              <img src="bni-logo-white.png" alt="BNI">
-              <span>Orgulloso miembro</span>
-            </div>
+      <div class="roadmap reveal">
+        <div class="rm-step">
+          <div class="rm-num">1</div>
+          <div class="rm-body">
+            <div class="rm-head"><div class="rm-title">Descubrimiento y arquitectura</div><div class="rm-time">Semana 1</div></div>
+            <p class="rm-lead">La base que evita sorpresas y retrabajos: mapeamos cada decisión antes de diseñar una sola pantalla.</p>
+            <ul class="rm-list">
+              <li>Mapa del sitio y flujo de compra validado</li>
+              <li>Estructura de catálogo: colecciones, tags y variantes</li>
+              <li>Checklist técnico: dominio, apps y pasarela de pago</li>
+            </ul>
           </div>
-          <div class="bni-disc">Referido BNI de confianza — Tesistech no recibe ninguna compensación económica por este referido. Lo hacemos por el gusto de ganar dando, y porque es un profesional en quien confiamos plenamente.</div>
         </div>
-        <div class="aprice" style="flex:none;">$50,000<small>MXN · presupuesto ilustrativo</small></div>
+        <div class="rm-step">
+          <div class="rm-num">2</div>
+          <div class="rm-body">
+            <div class="rm-head"><div class="rm-title">Diseño UX/UI</div><div class="rm-time">Semana 1-2</div></div>
+            <p class="rm-lead">Tu marca de lujo, ahora en pantalla: convertimos los mockups que ya aprobaste en una experiencia real, pixel por pixel.</p>
+            <ul class="rm-list">
+              <li>Maquetación de alta fidelidad sobre los mockups ya validados</li>
+              <li>Sistema de diseño (tipografía, color, componentes) para Shopify</li>
+              <li>Diseño responsivo, mobile-first</li>
+            </ul>
+          </div>
+        </div>
+        <div class="rm-step">
+          <div class="rm-num">3</div>
+          <div class="rm-body">
+            <div class="rm-head"><div class="rm-title">Desarrollo de la tienda</div><div class="rm-time">Semana 2-3</div></div>
+            <p class="rm-lead">Aquí la tienda cobra vida: catálogo, pagos y La Cava listos para recibir clientes reales, no una maqueta.</p>
+            <ul class="rm-list">
+              <li>Tema Shopify configurado con la identidad de Med&amp;Canna</li>
+              <li>Catálogo cargado: colecciones humanos y animales, variantes y precios</li>
+              <li>Checkout, métodos de pago y envíos configurados</li>
+              <li>La Cava Fase 1: gating, página VIP y tagging manual</li>
+            </ul>
+          </div>
+        </div>
+        <div class="rm-step">
+          <div class="rm-num">4</div>
+          <div class="rm-body">
+            <div class="rm-head"><div class="rm-title">Contenido bilingüe</div><div class="rm-time">En paralelo</div></div>
+            <p class="rm-lead">Para que ningún cliente se quede fuera: cada palabra pensada para tus dos mercados, sin perder el tono de marca.</p>
+            <ul class="rm-list">
+              <li>Textos y fichas de producto en español e inglés</li>
+              <li>Metadatos y SEO básico por idioma</li>
+              <li>Contenido educativo de marca integrado a la tienda</li>
+            </ul>
+          </div>
+        </div>
+        <div class="rm-step">
+          <div class="rm-num">5</div>
+          <div class="rm-body">
+            <div class="rm-head"><div class="rm-title">QA y pruebas</div><div class="rm-time">Semana 3-4</div></div>
+            <p class="rm-lead">Cero sorpresas el día del lanzamiento: probamos cada clic y cada pago para que tu primer cliente real viva una experiencia perfecta.</p>
+            <ul class="rm-list">
+              <li>Compra de extremo a extremo probada en desktop y mobile</li>
+              <li>Validación de checkout y métodos de pago</li>
+              <li>Revisión de velocidad de carga y compatibilidad de navegadores</li>
+            </ul>
+          </div>
+        </div>
+        <div class="rm-step">
+          <div class="rm-num">6</div>
+          <div class="rm-body">
+            <div class="rm-head"><div class="rm-title">Lanzamiento</div><div class="rm-time">Semana 4</div></div>
+            <p class="rm-lead">El día en que Med&amp;Canna existe para el mundo: tienda en vivo, segura y lista para recibir pauta desde el primer minuto.</p>
+            <ul class="rm-list">
+              <li>Dominio conectado y certificado SSL activo</li>
+              <li>Píxeles y tracking de Meta listos para recibir pauta</li>
+              <li>Tienda en vivo y verificada</li>
+            </ul>
+          </div>
+        </div>
+        <div class="rm-step">
+          <div class="rm-num">7</div>
+          <div class="rm-body">
+            <div class="rm-head"><div class="rm-title">Acompañamiento post-lanzamiento</div><div class="rm-time">30 días</div></div>
+            <p class="rm-lead">No te dejamos solo apenas encendemos la tienda: 30 días a tu lado, resolviendo lo que surja y dejando a tu equipo con el control total.</p>
+            <ul class="rm-list">
+              <li>Monitoreo y corrección de errores</li>
+              <li>Ajustes menores de contenido y diseño</li>
+              <li>Capacitación a tu equipo para administrar pedidos y La Cava</li>
+            </ul>
+          </div>
+        </div>
       </div>
-
-      <p style="text-align:center;color:var(--ink-2);font-size:13.5px;margin-top:18px;">+ tu inversión en pauta va directo a Meta, aparte — tú la controlas, nosotros la optimizamos.</p>
+      <p style="text-align:center;color:var(--ink-2);font-size:13.5px;margin-top:18px;">Sabes qué recibes, cuándo lo recibes y cómo se ve cada entregable — cero ambigüedad, cero sorpresas.</p>
     </div>
   </section>
 
-  <!-- ============ COTIZADOR ============ -->
-  <section class="block" id="cotizador" style="padding-top:0;">
+  <!-- ============ COTIZADOR MODULAR (TIENDA) ============ -->
+  <section class="block" id="cotizador-modular" style="padding-top:0;">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">Arma el paquete de Joyce</span>
-        <h2>Configura y cotiza al instante.</h2>
-        <p id="cotDesc">Elige el plan, suma la estrategia de identidad de marca y el contenido extra que necesites.</p>
+        <span class="eyebrow">Arma la tienda de Med&amp;Canna</span>
+        <h2>Configura tu tienda y cotiza al instante.</h2>
+        <p>Prende los módulos de tienda que necesitas — el precio se actualiza en vivo. La gestión mensual es una fase posterior, detallada más abajo.</p>
       </div>
       <div class="config reveal">
         <div class="controls">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
-            <label class="cfg-label" style="margin:0;">1 · Plan base</label>
-            <span class="vpill" id="versionPill">V1 · Todo incluido</span>
-          </div>
-          <div class="segmented" id="segPlan">
-            <button class="seg" data-plan="crecimiento" type="button">Crecimiento<small id="pre-crecimiento">$9,900/mes</small></button>
-            <button class="seg active" data-plan="autopilot" type="button">Autopilot<small id="pre-autopilot">$14,900/mes</small></button>
-          </div>
+          <div class="mod-group-title">Tienda (setup único)</div>
+          <div id="modsSetup"></div>
 
-          <div class="toggle-row">
+          <div class="defer-row">
             <div>
-              <div class="tl">Estrategia de identidad de marca y pilares</div>
-              <div class="tt">Pago único de $50,000 MXN — la base estratégica de todo el sistema.</div>
+              <div class="tl">Diferir el setup</div>
+              <div class="tt">Divide el pago único de tienda en mensualidades.</div>
             </div>
-            <label class="switch"><input type="checkbox" id="idToggle" checked><span class="track"></span></label>
+            <div class="segmented" id="segDefer">
+              <button class="seg" data-m="3" type="button">3 meses</button>
+              <button class="seg" data-m="4" type="button">4 meses</button>
+              <button class="seg active" data-m="5" type="button">5 meses</button>
+              <button class="seg" data-m="6" type="button">6 meses</button>
+            </div>
           </div>
-
-          <label class="cfg-label" id="ugcLabel">2 · Video ads con IA extra al mes</label>
-          <div class="slider-row">
-            <input type="range" min="0" max="40" value="0" step="1" class="slider" id="qty" aria-label="Creativos UGC extra">
-            <div class="val"><span id="qtyVal">0</span> <small>videos</small></div>
-          </div>
-          <div class="ppv" id="ppv"></div>
         </div>
 
         <div class="summary">
-          <h3>Cotización de Joyce</h3>
-          <div class="gh">Inversión inicial (única)</div>
-          <div class="sumline"><span id="sumSetupName">Setup Autopilot</span><span id="sumSetup">$19,900</span></div>
-          <div class="sumline" id="sumIdLine"><span>Identidad de marca y pilares</span><span id="sumId">$50,000</span></div>
-          <div class="sumtot"><span class="lbl">Total inicial</span><span class="t" id="totInicial">$0</span></div>
+          <h3>Cotización de Med&amp;Canna</h3>
+          <div class="gh">Setup de tienda (pago único)</div>
+          <div class="sumtot"><span class="lbl">Setup único</span><span class="t" id="sumSetupTotal">$0</span></div>
 
-          <div class="gh">Mensual</div>
-          <div class="sumline"><span id="sumPlanName">Plan Autopilot</span><span id="sumPlanMo">$14,900</span></div>
-          <div class="sumline"><span id="sumExtraLbl">Sin contenido extra</span><span id="sumExtra">$0</span></div>
-          <div class="sumtot"><span class="lbl">Total mensual</span><span class="t" id="totMensual">$0<small> /mes</small></span></div>
-          <div class="pieces" id="pieces"></div>
+          <div class="gh">Si prefieres diferir</div>
+          <div class="sumtot"><span class="lbl" id="sumDeferLbl">Diferido a 5 meses</span><span class="t" id="sumDeferPer">$0<small> /mes</small></span></div>
 
           <a class="btn btn-primary" id="waBtn" href="#" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
           <button class="btn mini" id="copyBtn" type="button">Copiar cotización</button>
-          <div class="disc">Precios en MXN, sugeridos. La inversión en pauta va aparte, directo a Meta. Cada video IA rinde ~3 piezas con variantes.</div>
+          <div class="disc">Precios en MXN. La gestión mensual (fase 2) se cotiza por separado cuando arranque.</div>
+          <ul class="disc-list">
+            <li>Suscripción mensual de Shopify — la paga directo Med&amp;Canna a Shopify, no incluida aquí.</li>
+            <li>Dominio y su renovación anual — aparte.</li>
+            <li>Apps de terceros que se decida instalar (envíos, reviews, etc.) — sus cuotas van aparte.</li>
+            <li>Comisión de la pasarela de pago por transacción — la cobra el procesador, no Tesistech.</li>
+            <li>Inversión en pauta (Meta Ads) — va directo a Meta, fuera de esta cotización.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FASE 2: GESTIÓN Y CRECIMIENTO ============ -->
+  <section class="block" id="gestion-fase2" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Fase 2 · cuando arranque el crecimiento</span>
+        <h2>Lo que activamos para hacer crecer a Med&amp;Canna.</h2>
+        <p>Una vez que la tienda esté en línea y el inventario listo, esta es la gestión mensual que ponemos a trabajar — se cotiza por separado en su momento, no es parte de esta propuesta.</p>
+      </div>
+      <div class="cards">
+        <div class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l18-8-8 18-2-8-8-2z" stroke-linejoin="round"/></svg></div>
+          <h3>Gestión de campañas</h3>
+          <p>Creamos y operamos tus campañas en Meta — tú no tocas el administrador de anuncios.</p>
+        </div>
+        <div class="card reveal d1">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3" stroke-linecap="round"/></svg></div>
+          <h3>Análisis y estrategia</h3>
+          <p>Leemos los datos y decidimos el siguiente movimiento. Aquí está el cerebro del crecimiento.</p>
+        </div>
+        <div class="card reveal d2">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6" stroke-linecap="round"/></svg></div>
+          <h3>Reporte semanal + dashboard</h3>
+          <p>Cada semana ves tu ROAS en una liga viva, sin esperar.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M10 9l5 3-5 3V9z" fill="currentColor" stroke="none"/></svg></div>
+          <h3>Coordinación de contenido</h3>
+          <p>Briefeamos y dirigimos tu UGC para que cada video venda.</p>
+        </div>
+        <div class="card reveal d1">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="12" rx="3"/><path d="M7 21l3-4" stroke-linecap="round"/></svg></div>
+          <h3>Comunicación con cliente</h3>
+          <p>Canal directo y seguimiento — nunca te quedas sin saber qué pasa.</p>
+        </div>
+        <div class="card reveal d2">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4" stroke-linecap="round"/></svg></div>
+          <h3>Reunión presencial mensual</h3>
+          <p>Una sesión cara a cara al mes para revisar resultados y plan.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6" stroke-linecap="round"/></svg></div>
+          <h3>Email marketing</h3>
+          <p>Vende a tu base y recupera carritos con correos que convierten.</p>
         </div>
       </div>
     </div>
@@ -498,9 +562,9 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   <section class="block" id="contacto" style="padding-top:0;">
     <div class="wrap cta-final">
       <div class="reveal">
-        <span class="eyebrow">Hablemos, Magui</span>
-        <h2>Hagamos que Joyce venda mientras duerme.</h2>
-        <p class="sub">Nos encantaría platicar contigo cómo se vería esto para Joyce, sin compromiso. Tú decides el ritmo; nosotros ponemos la estrategia, el contenido y la operación.</p>
+        <span class="eyebrow">Hablemos, Santiago</span>
+        <h2>Lancemos la tienda online que Med&amp;Canna merece.</h2>
+        <p class="sub">Nos encantaría platicar contigo cómo se vería esto para Med&amp;Canna, sin compromiso. Tú decides el ritmo; nosotros ponemos el diseño, el desarrollo de la tienda y La Cava.</p>
         <div class="contact-list">
           <a href="https://wa.me/message/F6HBJHEAHJENM1"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.1-1.3A10 10 0 1 0 12 2z"/></svg>WhatsApp directo</a>
           <a href="mailto:hola@tesistech.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6" stroke-linecap="round"/></svg>hola@tesistech.com</a>
@@ -508,7 +572,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
         </div>
       </div>
       <div class="aside reveal d1">
-        <div class="q">“Operadores, no teóricos: hacemos por tu marca lo que hacemos por la nuestra — vendiendo en Meta todos los días.”</div>
+        <div class="q">“No construimos un website — construimos una tienda online de clase mundial, lista para vender, fidelizar y crecer.”</div>
         <div class="by">— Tesistech, servicios de eCommerce</div>
       </div>
     </div>
@@ -520,7 +584,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
     <div class="brandmark">
       <img src="logo-tesistech-transparente.png" alt="Tesistech" class="logo-footer">
     </div>
-    <div style="font-size:13px;">Propuesta confidencial para Joyce · © <span id="y"></span> Tesistech</div>
+    <div style="font-size:13px;">Propuesta confidencial para Med&amp;Canna · © <span id="y"></span> Tesistech</div>
   </div>
 </footer>
 
@@ -528,114 +592,99 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   document.getElementById('y').textContent = new Date().getFullYear();
 
   (function(){
-    // ✏️ PRECIO: planes por versión
-    const PLANS_DATA={
-      v1:{
-        crecimiento:{n:'Crecimiento',setup:14900,mo:9900,ugc:6},
-        autopilot:{n:'Autopilot',setup:19900,mo:14900,ugc:12}
-      },
-      v2:{
-        crecimiento:{n:'Crecimiento',setup:14900,mo:5900,ugc:0},
-        autopilot:{n:'Autopilot',setup:19900,mo:7900,ugc:0}
-      }
-    };
-    let currentVersion='v1';
-    let PLANS=PLANS_DATA.v1;
-    // ✏️ PRECIO: estrategia de identidad de marca (pago único). Subcontratado a Alex Mange.
-    const BRAND_IDENTITY=50000;
-    // ✏️ PRECIO: venta por video UGC (MXN) según volumen
-    // V2 usa precios de paquete; V1 usa precios à la carte para extras sobre plan
-    function ppv(q){
-      if(currentVersion==='2'){ if(q>=12)return 583; if(q>=6)return 667; return 800; }
-      if(q>=20)return 950; if(q>=10)return 1100; if(q>=5)return 1250; return 1400;
-    }
+    // ✏️ PRECIO — valor del punto en MXN (precio de venta, margen dentro)
+    const VALOR_PUNTO=1000;
     // ✏️ Tu WhatsApp con código de país (ej. '5213312345678'). Vacío = abre tu chat sin texto.
     const WA_PHONE='5213334878186';
     const FALLBACK_WA='https://wa.me/message/F6HBJHEAHJENM1';
 
+    const MODULES=[
+      {id:'tienda-plantilla',nombre:'Tienda con plantilla',desc:'Tu tienda Shopify premium lista para vender, rápida de lanzar.',puntos:13.89,exclusivo:'tienda',default:true},
+      {id:'tienda-custom',nombre:'Tienda custom',desc:'Diseño a medida y experiencia única para tu marca.',puntos:27.44,exclusivo:'tienda',default:false,recomendado:true},
+      {id:'integraciones',nombre:'Integraciones',desc:'Conecta tu inventario, logística, CRM, facturación o el motor de automatización de La Cava — todo sincronizado.',puntos:7.34,porUnidad:true,unidadLbl:'integración',default:false},
+      {id:'multiidioma',nombre:'Multiidioma / multi-región',desc:'Vende en varios idiomas y regiones, con SEO por idioma.',puntos:4.427,default:false},
+      {id:'migracion',nombre:'Migración de catálogo',desc:'Subimos tus productos, variantes e imágenes por ti.',puntos:3.87,porUnidad:true,unidadLbl:'~50 productos',default:false},
+    ];
+
     const $=id=>document.getElementById(id);
-    const fmt=n=>'$'+n.toLocaleString('es-MX');
-    let plan='autopilot', lastMsg='';
+    const fmt=n=>'$'+Math.round(n).toLocaleString('es-MX');
+    const state={};
+    MODULES.forEach(m=>{ state[m.id]={on:m.default,qty:1}; });
+    let deferMonths=5, lastMsg='';
+
+    function precio(m){ return m.puntos*VALOR_PUNTO*(m.porUnidad?state[m.id].qty:1); }
+
+    function buildRow(m){
+      const row=document.createElement('div');
+      row.className='mod-row';
+      const qtyHtml = m.porUnidad
+        ? `<select class="qty-select" data-qty="${m.id}" ${state[m.id].on?'':'disabled'}>${Array.from({length:10},(_,i)=>i+1).map(n=>`<option value="${n}" ${n===state[m.id].qty?'selected':''}>${n}${m.unidadLbl?(' × '+m.unidadLbl):''}</option>`).join('')}</select>`
+        : '';
+      row.innerHTML=`
+        <div class="mod-info">
+          <div class="mod-name">${m.nombre} ${m.recomendado?'<span class="mod-badge">Recomendado</span>':''} <span class="mod-price" data-price="${m.id}"></span></div>
+          <div class="mod-desc">${m.desc}</div>
+        </div>
+        <div class="mod-right">
+          ${qtyHtml}
+          <label class="switch"><input type="checkbox" data-toggle="${m.id}" ${state[m.id].on?'checked':''}><span class="track"></span></label>
+        </div>`;
+      return row;
+    }
+
+    function renderRows(){
+      const setupWrap=$('modsSetup');
+      setupWrap.innerHTML='';
+      MODULES.forEach(m=>setupWrap.appendChild(buildRow(m)));
+      document.querySelectorAll('[data-toggle]').forEach(input=>{
+        input.addEventListener('change',()=>{
+          const id=input.dataset.toggle, m=MODULES.find(x=>x.id===id);
+          state[id].on=input.checked;
+          if(input.checked && m.exclusivo){
+            MODULES.filter(x=>x.exclusivo===m.exclusivo && x.id!==id).forEach(x=>{ state[x.id].on=false; });
+          }
+          renderRows(); render();
+        });
+      });
+      document.querySelectorAll('[data-qty]').forEach(sel=>{
+        sel.addEventListener('change',()=>{
+          state[sel.dataset.qty].qty=+sel.value; render();
+        });
+      });
+      MODULES.forEach(m=>{
+        const el=document.querySelector(`[data-price="${m.id}"]`);
+        if(el) el.textContent = state[m.id].on ? fmt(precio(m)) : '';
+      });
+    }
 
     function render(){
-      const p=PLANS[plan], q=+$('qty').value, per=ppv(q), extra=q*per;
-      const identidad = $('idToggle').checked ? BRAND_IDENTITY : 0;
-      const inicial = p.setup + identidad;
-      const mensual = p.mo + extra;
-      const raws=p.ugc+q, pieces=raws*3;
+      const setups=MODULES.filter(m=>state[m.id].on);
+      const totalSetup=setups.reduce((s,m)=>s+precio(m),0);
+      const setupPorMes=totalSetup/deferMonths;
 
-      $('qtyVal').textContent=q;
-      $('qty').style.setProperty('--p',(q/40*100)+'%');
-      $('ppv').textContent = q>0 ? ('Precio por video IA a este volumen: '+fmt(per)+' c/u') : 'Mueve el control para sumar video ads con IA.';
+      $('sumSetupTotal').textContent=fmt(totalSetup);
+      $('sumDeferLbl').textContent='Diferido a '+deferMonths+' meses';
+      $('sumDeferPer').innerHTML=fmt(setupPorMes)+'<small> /mes</small>';
 
-      $('sumSetupName').textContent='Setup '+p.n;
-      $('sumSetup').textContent=fmt(p.setup);
-      $('sumIdLine').style.display = identidad ? 'flex' : 'none';
-      $('totInicial').textContent=fmt(inicial);
-
-      $('sumPlanName').textContent='Plan '+p.n;
-      $('sumPlanMo').textContent=fmt(p.mo);
-      $('sumExtraLbl').textContent = q>0 ? (q+' videos IA'+(currentVersion==='2'?' (add-on)':' extra')+' × '+fmt(per)) : 'Sin video ads adicionales';
-      $('sumExtra').textContent=fmt(extra);
-      $('totMensual').innerHTML=fmt(mensual)+'<small> /mes</small>';
-      $('pieces').textContent = raws>0 ? (raws+' videos IA/mes ≈ '+pieces+' piezas con variantes') : '';
-
-      const vLabel=currentVersion==='2'?' (solo Meta Ads)':' (con video ads IA incluidos)';
-      lastMsg='Propuesta Joyce V'+currentVersion+' — Tesistech:\n• Plan '+p.n+vLabel+': '+fmt(p.mo)+'/mes (setup '+fmt(p.setup)+')'
-        + (identidad?('\n• Identidad de marca y pilares: '+fmt(identidad)+' único'):'')
-        + (q>0?('\n• '+q+' videos IA'+(currentVersion==='2'?' (add-on)':' extra')+': '+fmt(extra)+'/mes'):'')
-        + '\n• Inversión inicial: '+fmt(inicial)
-        + '\n• Mensual: '+fmt(mensual);
+      const lineas=setups.map(m=>'• '+m.nombre+(m.porUnidad?(' ×'+state[m.id].qty):'')+': '+fmt(precio(m)));
+      lastMsg='Cotización Med&Canna — Tesistech:\n'+lineas.join('\n')
+        + '\n• Setup único: '+fmt(totalSetup)
+        + '\n• Diferido a '+deferMonths+' meses: '+fmt(setupPorMes)+'/mes';
       $('waBtn').href = WA_PHONE ? ('https://api.whatsapp.com/send/?phone='+WA_PHONE+'&text='+encodeURIComponent(lastMsg)) : FALLBACK_WA;
     }
-    $('segPlan').addEventListener('click',e=>{
+
+    $('segDefer').addEventListener('click',e=>{
       const b=e.target.closest('.seg'); if(!b)return;
-      $('segPlan').querySelectorAll('.seg').forEach(x=>x.classList.remove('active'));
-      b.classList.add('active'); plan=b.dataset.plan; render();
+      $('segDefer').querySelectorAll('.seg').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active'); deferMonths=+b.dataset.m; render();
     });
-    $('qty').addEventListener('input',render);
-    $('idToggle').addEventListener('change',render);
     $('copyBtn').addEventListener('click',()=>{
       navigator.clipboard.writeText(lastMsg).then(()=>{
         const b=$('copyBtn'), t=b.textContent; b.textContent='¡Copiado!'; setTimeout(()=>b.textContent=t,1500);
       }).catch(()=>{});
     });
 
-    function switchVersion(v){
-      currentVersion=v;
-      PLANS=PLANS_DATA['v'+v];
-      document.body.classList.toggle('version-2',v==='2');
-      // update card prices
-      document.querySelectorAll('.price-mo[data-v1]').forEach(el=>{
-        const price=Number(el.dataset['v'+v]);
-        el.innerHTML='$'+price.toLocaleString('es-MX')+' <small>MXN / mes</small>';
-      });
-      // update vtabs active state
-      document.querySelectorAll('.vtab').forEach(b=>b.classList.toggle('active',b.dataset.v===v));
-      // update hint text
-      const hints={'1':'Meta Ads + video ads con avatares IA incluidos en el plan mensual','2':'Solo gestión de Meta Ads — video ads IA cotizables como add-on abajo'};
-      $('vbHint').textContent=hints[v]||'';
-      // update version pill and description in cotizador
-      $('versionPill').textContent=v==='2'?'V2 · Solo Meta Ads':'V1 · Todo incluido';
-      $('cotDesc').textContent=v==='2'
-        ?'Elige el plan de gestión de Meta Ads, suma identidad de marca y los video ads IA que necesites.'
-        :'Elige el plan, suma la estrategia de identidad de marca y el contenido extra que necesites.';
-      // update plan button prices
-      document.querySelectorAll('#segPlan .seg').forEach(b=>{
-        const p=PLANS[b.dataset.plan], sm=b.querySelector('small');
-        if(sm&&p) sm.textContent=fmt(p.mo)+'/mes';
-      });
-      // update cotizador ugc label
-      $('ugcLabel').textContent=v==='2'?'2 · Video ads con IA al mes':'2 · Video ads con IA extra al mes';
-      // reset slider and re-render
-      $('qty').value=0;
-      render();
-    }
-    document.getElementById('vtabs').addEventListener('click',e=>{
-      const b=e.target.closest('.vtab'); if(!b)return;
-      switchVersion(b.dataset.v);
-    });
-
+    renderRows();
     render();
   })();
 
