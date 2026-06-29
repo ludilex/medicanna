@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kick-off · Med&amp;Canna — Tesistech</title>
+<meta name="description" content="Agenda de la reunión de arranque (kick-off) de la tienda online Med&amp;Canna: alcance confirmado, checklist de accesos y materiales, dependencias y términos.">
+
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Hanken+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --brand:#1392D1;--brand-600:#0E76AB;--brand-300:#74C2EC;
+  --ink:#0C1622;--ink-2:#48566A;--bg:#F4F7FA;--surface:#FFFFFF;
+  --font-display:"Chakra Petch",sans-serif;--font-body:"Hanken Grotesque",sans-serif;
+  --line:rgba(12,22,34,.10);--line-2:rgba(12,22,34,.06);
+  --shadow:0 1px 2px rgba(12,22,34,.04),0 12px 40px -12px rgba(12,22,34,.14);--radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;
+  background-image:linear-gradient(var(--line-2) 1px,transparent 1px),linear-gradient(90deg,var(--line-2) 1px,transparent 1px);
+  background-size:64px 64px;background-position:center top;}
+.wrap{max-width:880px;margin:0 auto;padding:0 28px;}
+a{color:inherit;text-decoration:none;}
+.eyebrow{font-family:var(--font-display);font-weight:600;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--brand-600);display:inline-flex;align-items:center;gap:9px;}
+.eyebrow::before{content:"";width:22px;height:1.5px;background:var(--brand);}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;line-height:1.12;letter-spacing:-.01em;}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:600;font-size:15px;padding:13px 22px;border-radius:10px;transition:transform .18s ease,box-shadow .25s ease,background .2s ease;cursor:pointer;border:1px solid transparent;}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 10px 26px -10px rgba(19,146,209,.7);}
+.btn-primary:hover{background:var(--brand-600);transform:translateY(-2px);}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line);}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand-600);}
+.btn svg{width:16px;height:16px;}
+
+header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(1.2) blur(10px);background:rgba(244,247,250,.85);border-bottom:1px solid var(--line);}
+.bar{display:flex;align-items:center;justify-content:space-between;height:72px;}
+.logo{height:64px;width:auto;display:block;}
+.bar .right{display:flex;align-items:center;gap:18px;}
+.back-link{font-family:var(--font-display);font-weight:600;font-size:13px;color:var(--ink-2);display:flex;align-items:center;gap:6px;}
+.back-link:hover{color:var(--brand-600);}
+.back-link svg{width:15px;height:15px;}
+
+main{padding:56px 0 90px;}
+.hero-kick h1{font-size:clamp(30px,4.5vw,44px);margin:14px 0 0;}
+.hero-kick .lede{font-size:16px;color:var(--ink-2);margin-top:16px;max-width:62ch;}
+.meta-row{display:flex;gap:28px;flex-wrap:wrap;margin-top:26px;}
+.meta-item .l{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);font-family:var(--font-display);font-weight:600;}
+.meta-item .v{font-size:14.5px;color:var(--ink);margin-top:3px;font-weight:600;}
+
+section.block{padding:54px 0;border-top:1px solid var(--line);}
+section.block:first-of-type{border-top:none;}
+.sec-head{max-width:680px;margin-bottom:30px;}
+.sec-head h2{font-size:clamp(22px,3vw,28px);margin-top:10px;}
+.sec-head p{color:var(--ink-2);margin-top:10px;font-size:15px;}
+
+.ctx-list{list-style:none;display:flex;flex-direction:column;gap:12px;}
+.ctx-list li{position:relative;padding-left:24px;font-size:14.5px;color:var(--ink-2);line-height:1.6;}
+.ctx-list li::before{content:"";position:absolute;left:0;top:7px;width:13px;height:13px;border-radius:4px;border:2px solid var(--brand-300);}
+.ctx-list b{color:var(--ink);}
+
+.roadmap{display:flex;flex-direction:column;}
+.rm-step{position:relative;display:flex;gap:20px;padding-bottom:30px;}
+.rm-step:last-child{padding-bottom:0;}
+.rm-step::before{content:"";position:absolute;left:19px;top:42px;bottom:-2px;width:2px;background:var(--line);}
+.rm-step:last-child::before{display:none;}
+.rm-num{flex:none;width:40px;height:40px;border-radius:50%;background:var(--brand);color:#fff;font-family:var(--font-display);font-weight:700;font-size:13px;display:grid;place-items:center;position:relative;z-index:1;box-shadow:0 8px 20px -8px rgba(19,146,209,.6);text-align:center;line-height:1.1;}
+.rm-body{flex:1;padding-top:4px;min-width:0;}
+.rm-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.rm-title{font-family:var(--font-display);font-weight:600;font-size:16px;}
+.rm-time{font-family:var(--font-display);font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--brand-600);background:rgba(19,146,209,.08);padding:4px 10px;border-radius:999px;white-space:nowrap;}
+.rm-lead{font-size:14px;color:var(--ink-2);margin-top:7px;max-width:60ch;}
+.rm-note{font-size:13px;color:var(--brand-600);margin-top:8px;font-weight:500;}
+
+.check-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.check-group{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;}
+.check-group.full{grid-column:1 / -1;}
+.check-group h3{font-size:14px;margin-bottom:14px;}
+.check-list{list-style:none;display:flex;flex-direction:column;gap:11px;}
+.check-list li{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:var(--ink-2);line-height:1.5;}
+.check-list input{margin-top:3px;width:15px;height:15px;accent-color:var(--brand);flex:none;cursor:pointer;}
+.check-list span{flex:1;min-width:0;}
+.check-sub{margin-top:18px;}
+.check-sub:first-of-type{margin-top:0;}
+.check-sub h4{font-family:var(--font-display);font-weight:600;font-size:12px;letter-spacing:.04em;color:var(--brand-600);margin-bottom:10px;}
+.check-note{font-size:12.5px;color:var(--ink-2);font-style:italic;margin-top:8px;padding-left:25px;}
+
+.dep-list{display:flex;flex-direction:column;gap:16px;}
+.dep-item{display:flex;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;align-items:flex-start;}
+.dep-num{flex:none;width:30px;height:30px;border-radius:50%;background:rgba(19,146,209,.10);color:var(--brand-600);font-family:var(--font-display);font-weight:700;font-size:13px;display:grid;place-items:center;}
+.dep-item h3{font-size:14.5px;margin-bottom:4px;}
+.dep-item p{font-size:13.5px;color:var(--ink-2);}
+
+.trial-box{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;justify-content:space-between;}
+.trial-box .th{font-family:var(--font-display);font-weight:600;font-size:16px;}
+.trial-box .tp{color:var(--ink-2);font-size:13.5px;margin-top:6px;max-width:54ch;}
+
+.terms-list{list-style:none;counter-reset:terms;display:flex;flex-direction:column;gap:14px;}
+.terms-list li{counter-increment:terms;position:relative;padding-left:30px;font-size:13.5px;color:var(--ink-2);line-height:1.6;}
+.terms-list li::before{content:counter(terms);position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:rgba(19,146,209,.10);color:var(--brand-600);font-family:var(--font-display);font-weight:700;font-size:10.5px;display:grid;place-items:center;}
+
+footer{background:var(--ink);color:#9FB2C2;padding:36px 0;margin-top:0;}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;}
+.logo-footer{height:60px;width:auto;filter:brightness(0) invert(1);}
+
+@media (max-width:760px){
+  .check-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a href="index.html" aria-label="Tesistech"><img src="logo-tesistech-transparente.png" alt="Tesistech" class="logo"></a>
+    <div class="right">
+      <a class="back-link" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M11 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Volver a la propuesta
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero-kick">
+    <span class="eyebrow">Kick-off · Med&amp;Canna</span>
+    <h1>Reunión de arranque — Semana 1</h1>
+    <p class="lede">El objetivo de esta reunión es confirmar que el alcance vendido quedó claro para ambos, juntar los accesos y materiales que necesitamos para empezar el descubrimiento, y salir con dependencias y fechas definidas.</p>
+    <div class="meta-row">
+      <div class="meta-item"><div class="l">Duración</div><div class="v">30 minutos</div></div>
+      <div class="meta-item"><div class="l">Asisten</div><div class="v">Santiago Gallegos · Tesistech</div></div>
+      <div class="meta-item"><div class="l">Da inicio a</div><div class="v">Semana 1 — Descubrimiento y arquitectura</div></div>
+    </div>
+  </div>
+
+  <!-- ============ CONTEXTO ============ -->
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Contexto del proyecto</span>
+        <h2>Según la propuesta confirmada.</h2>
+      </div>
+      <ul class="ctx-list">
+        <li><b>Entregable:</b> tienda online completa, bilingüe (ES/EN) en Shopify — catálogo, carrito y checkout reales, no un website informativo.</li>
+        <li><b>Dos colecciones:</b> Humanos (Aura, Nocturnus, Invictus, Zenit) y Animales.</li>
+        <li><b>La Cava Fase 1 (incluida):</b> gating + página VIP + tagging manual por invitación. La Fase 2 (acceso automático por métricas) se cotiza por separado más adelante.</li>
+        <li><b>Cronograma:</b> ~4 semanas hasta el lanzamiento + 30 días de acompañamiento post-lanzamiento.</li>
+        <li><b>Fase 2</b> (gestión mensual: pauta, contenido, email, dashboard): posterior, se cotiza por separado.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ AGENDA ============ -->
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Agenda</span>
+        <h2>Cómo usamos los 30 minutos.</h2>
+      </div>
+      <div class="roadmap">
+        <div class="rm-step">
+          <div class="rm-num">0:00<br>0:02</div>
+          <div class="rm-body">
+            <div class="rm-head"><div class="rm-title">Apertura</div><div class="rm-time">2 min</div></div>
+            <p class="rm-lead">Arrancamos formalmente la Semana 1. La meta de hoy: confirmar que vemos lo mismo, reunir lo necesario para iniciar el descubrimiento, y salir con dependencias y fechas claras.</p>
+          </div>
+        </div>
+        <div class="rm-step">
+          <div class="rm-num">0:02<br>0:09</div>
+          <div class="rm-body">
+            <div class="rm-head"><div class="rm-title">Confirmar el alcance tal como se vendió</div><div class="rm-time">7 min</div></div>
+            <p class="rm-lead">Repasamos juntos el alcance para confirmar que coincide con lo acordado en la propuesta: tienda bilingüe con catálogo, carrito y checkout reales; dos colecciones; La Cava Fase 1 manual incluida en el lanzamiento; cada anuncio aterrizando directo en su ficha de producto; dirección de arte a partir de los mockups ya validados; y la gestión mensual (Fase 2) como una etapa posterior y aparte.</p>
+            <div class="rm-note">Si algo de esto lo entiendes distinto a como está en la propuesta, este es el momento de decirlo.</div>
+          </div>
+        </div>
+        <div class="rm-step">
+          <div class="rm-num">0:09<br>0:14</div>
+          <div class="rm-body">
+            <div class="rm-head"><div class="rm-title">Visión, prioridad y qué verás esta semana</div><div class="rm-time">5 min</div></div>
+            <p class="rm-lead">Platicamos cuál es la prioridad #1 del lanzamiento (verse de lujo, educar y romper el estigma, o conversión inmediata) y reconfirmamos el norte de marca: "yo consumo Med&amp;Canna", no "CBD". Cerramos fijando el entregable de la Semana 1: mapa del sitio y flujo de compra, estructura de catálogo (colecciones, tags, variantes) y checklist técnico — algo que podrás ver y aprobar.</p>
+          </div>
+        </div>
+        <div class="rm-step">
+          <div class="rm-num">0:14<br>0:23</div>
+          <div class="rm-body">
+            <div class="rm-head"><div class="rm-title">Accesos y materiales</div><div class="rm-time">9 min</div></div>
+            <p class="rm-lead">Repasamos la checklist de abajo. Lo que no tengas a la mano en el momento se convierte en tarea con dueño y fecha.</p>
+          </div>
+        </div>
+        <div class="rm-step">
+          <div class="rm-num">0:23<br>0:28</div>
+          <div class="rm-body">
+            <div class="rm-head"><div class="rm-title">Dependencias y tiempos</div><div class="rm-time">5 min</div></div>
+            <p class="rm-lead">Destrabamos los bloqueadores de la ruta crítica (abajo) y confirmamos el calendario de 4 semanas más los 30 días de acompañamiento.</p>
+          </div>
+        </div>
+        <div class="rm-step">
+          <div class="rm-num">0:28<br>0:30</div>
+          <div class="rm-body">
+            <div class="rm-head"><div class="rm-title">Cierre</div><div class="rm-time">2 min</div></div>
+            <p class="rm-lead">Recapitulamos acuerdos, dueños, la próxima fecha de seguimiento y el recordatorio de activar la suscripción del pago diferido.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHECKLIST ============ -->
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Antes o durante la reunión</span>
+        <h2>Checklist de accesos y materiales.</h2>
+        <p>Lo que tengas a la mano lo resolvemos en la reunión; lo que falte, queda como tarea con dueño y fecha.</p>
+      </div>
+      <div class="check-grid">
+        <div class="check-group full">
+          <h3>Requerimientos generales</h3>
+
+          <div class="check-sub">
+            <h4>Correo electrónico para la operación</h4>
+            <ul class="check-list">
+              <li><input type="checkbox"><span>Crear un email exclusivo para Med&amp;Canna, preferentemente en Gmail. Ejemplo sugerido: <i>medcanna@gmail.com</i> u <i>hola.medcanna@gmail.com</i> (o alguna variante disponible).</span></li>
+              <li><input type="checkbox"><span>Cambiar el email vinculado de Instagram a este nuevo correo, solo si hoy se usa una cuenta personal.</span></li>
+            </ul>
+            <p class="check-note">Este correo se utilizará para el acceso administrativo a Shopify y para las cuentas de Meta, Instagram y otras plataformas.</p>
+          </div>
+
+          <div class="check-sub">
+            <h4>Compras necesarias</h4>
+            <ul class="check-list">
+              <li><input type="checkbox"><span>Dominio web (les guiamos en el proceso de compra). Recomendación: <i>medcanna.mx</i></span></li>
+            </ul>
+          </div>
+
+          <div class="check-sub">
+            <h4>Redes sociales</h4>
+            <ul class="check-list">
+              <li><input type="checkbox"><span><b>Instagram:</b> correo con el que fue creada la cuenta (sugerimos cambiarlo por el nuevo correo exclusivo de Med&amp;Canna) y contraseña, solo si desean que configuremos todo de forma autónoma.</span></li>
+              <li><input type="checkbox"><span><b>Facebook:</b> correo con el que fue creada la cuenta y contraseña, solo si desean que configuremos todo de forma autónoma.</span></li>
+              <li><input type="checkbox"><span><b>TikTok:</b> crear cuenta usando el correo exclusivo de Med&amp;Canna.</span></li>
+              <li><input type="checkbox"><span><b>Pinterest:</b> crear cuenta usando el correo exclusivo de Med&amp;Canna.</span></li>
+              <li><input type="checkbox"><span><b>WhatsApp Business:</b> número dedicado únicamente a Med&amp;Canna.</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="check-group">
+          <h3>Accesos y técnico</h3>
+          <ul class="check-list">
+            <li><input type="checkbox"><span>Cuenta Shopify (¿ya existe o se crea? Acceso de staff o colaborador)</span></li>
+            <li><input type="checkbox"><span><b>Pasarela de pago:</b> definir cuál se usará y confirmar los datos para activarla. El checkout es real, así que es crítico tenerla lista.</span></li>
+            <li><input type="checkbox"><span>Meta Business Manager, para los píxeles y el tracking del lanzamiento.</span></li>
+            <li><input type="checkbox"><span>Apps de terceros que se decida instalar (envíos, reviews, etc.): definir cuáles.</span></li>
+          </ul>
+        </div>
+        <div class="check-group">
+          <h3>Materiales de marca</h3>
+          <ul class="check-list">
+            <li><input type="checkbox"><span>Logo y manual o guía de marca (si existe)</span></li>
+            <li><input type="checkbox"><span>Mockups con imágenes IA ya validados (dirección de arte)</span></li>
+            <li><input type="checkbox"><span>Paleta, tipografías y referencias de "lujo"</span></li>
+          </ul>
+        </div>
+        <div class="check-group">
+          <h3>Datos de producto</h3>
+          <ul class="check-list">
+            <li><input type="checkbox"><span>Línea humanos: Aura, Nocturnus, Invictus y Zenit, en presentaciones de 1,000, 1,500 y 3,000 mg.</span></li>
+            <li><input type="checkbox"><span>Línea animales: 2 productos y sus presentaciones.</span></li>
+            <li><input type="checkbox"><span>Precios de venta confirmados y qué presentaciones o productos salen primero</span></li>
+            <li><input type="checkbox"><span>Descripciones y claims permitidos (relevante por ser CBD)</span></li>
+            <li><input type="checkbox"><span>Imágenes reales de producto (¿se requiere sesión de fotos para las fichas, o se usan los mockups?)</span></li>
+          </ul>
+        </div>
+        <div class="check-group">
+          <h3>Contenido bilingüe</h3>
+          <ul class="check-list">
+            <li><input type="checkbox"><span>¿Quién redacta el copy ES/EN? Tú entregas la base o lo produce Tesistech.</span></li>
+            <li><input type="checkbox"><span>Material educativo existente, para el contenido de marca dentro de la tienda</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DEPENDENCIAS ============ -->
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Ruta crítica</span>
+        <h2>Dependencias que más impactan el calendario.</h2>
+      </div>
+      <div class="dep-list">
+        <div class="dep-item">
+          <div class="dep-num">1</div>
+          <div><h3>Pasarela de pago</h3><p>Sin checkout funcional no hay tienda. Definimos juntos el proveedor esta semana para arrancar su activación.</p></div>
+        </div>
+        <div class="dep-item">
+          <div class="dep-num">2</div>
+          <div><h3>Datos e imágenes de producto</h3><p>Condicionan la carga del catálogo y las fichas. Confirmamos si hace falta sesión de fotos o partimos de los mockups.</p></div>
+        </div>
+        <div class="dep-item">
+          <div class="dep-num">3</div>
+          <div><h3>Producción de copy bilingüe</h3><p>Define si se necesita tiempo o presupuesto adicional de redacción y traducción.</p></div>
+        </div>
+        <div class="dep-item">
+          <div class="dep-num">4</div>
+          <div><h3>Dominio</h3><p>El acceso al registrador/DNS para conectarlo en la Semana 4 (lanzamiento).</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RECORDATORIO ADMINISTRATIVO ============ -->
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Recordatorio administrativo</span>
+        <h2>Activación de la suscripción diferida.</h2>
+      </div>
+      <div class="trial-box">
+        <div>
+          <div class="th">Activar a más tardar el 30 de junio de 2026</div>
+          <div class="tp">La suscripción que cobra automáticamente las 6 mensualidades del resto del setup. Puedes activarla con el mismo link que está en la sección "Cómo pagar" de la propuesta.</div>
+        </div>
+        <a class="btn btn-primary" href="https://mpago.la/2JQfkps" target="_blank" rel="noopener">Activar suscripción
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TÉRMINOS Y CONDICIONES ============ -->
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Para repasar juntos</span>
+        <h2>Términos y condiciones.</h2>
+        <p>Los mismos términos incluidos en tu propuesta — los repasamos en esta reunión para confirmar que quedan claros antes de arrancar.</p>
+      </div>
+      <ol class="terms-list">
+        <li>Esta propuesta tiene una vigencia de 15 días naturales a partir de su fecha de emisión.</li>
+        <li>El anticipo de $10,000 MXN se paga al firmar y da inicio formal al proyecto; no es reembolsable una vez que arranca el desarrollo.</li>
+        <li>El resto del setup se difiere en 6 mensualidades iguales, cobradas por transferencia bancaria o mediante suscripción de Mercado Pago.</li>
+        <li>Un atraso mayor a 15 días en el pago de una mensualidad puede pausar el desarrollo hasta que el pago quede regularizado.</li>
+        <li>La propiedad de los entregables (diseño, tienda y contenido) se transfiere a Med&amp;Canna al completar el pago total del setup.</li>
+        <li>Cualquier módulo o ajuste fuera de lo incluido en esta propuesta se valora y cotiza por separado.</li>
+        <li>El acompañamiento de 30 días post-lanzamiento está incluido; la gestión mensual de Fase 2 se cotiza aparte cuando arranque.</li>
+        <li>Para cumplir los tiempos del roadmap, te pedimos amablemente que nos compartas a tiempo la información, materiales y aprobaciones que cada etapa del proyecto requiera — los retrasos en su entrega pueden mover las fechas comprometidas.</li>
+        <li>El contenido de esta propuesta es confidencial entre Tesistech y Med&amp;Canna.</li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="logo-tesistech-transparente.png" alt="Tesistech" class="logo-footer">
+    <div style="font-size:13px;">Propuesta confidencial para Med&amp;Canna · © <span id="y"></span> Tesistech</div>
+  </div>
+</footer>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
