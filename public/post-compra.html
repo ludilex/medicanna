@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experiencia Post-Compra · Med&amp;Canna — Tesistech</title>
+<meta name="description" content="El QR como extensión del producto. Módulo de experiencia post-compra para Med&Canna, por Tesistech.">
+
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Hanken+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --brand:#1392D1;--brand-600:#0E76AB;--brand-300:#74C2EC;
+  --ink:#0C1622;--ink-2:#48566A;--bg:#F4F7FA;--surface:#FFFFFF;
+  --font-display:"Chakra Petch",sans-serif;--font-body:"Hanken Grotesque",sans-serif;
+  --line:rgba(12,22,34,.10);--line-2:rgba(12,22,34,.06);
+  --shadow:0 1px 2px rgba(12,22,34,.04),0 12px 40px -12px rgba(12,22,34,.14);--radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  background-image:linear-gradient(var(--line-2) 1px,transparent 1px),linear-gradient(90deg,var(--line-2) 1px,transparent 1px);
+  background-size:64px 64px;background-position:center top;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px;}
+a{color:inherit;text-decoration:none;}
+.eyebrow{font-family:var(--font-display);font-weight:600;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--brand-600);display:inline-flex;align-items:center;gap:9px;}
+.eyebrow::before{content:"";width:22px;height:1.5px;background:var(--brand);}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;line-height:1.06;letter-spacing:-.01em;}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:600;font-size:15px;padding:13px 22px;border-radius:10px;transition:transform .18s ease,box-shadow .25s ease,background .2s ease;cursor:pointer;border:1px solid transparent;}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 10px 26px -10px rgba(19,146,209,.7);}
+.btn-primary:hover{background:var(--brand-600);transform:translateY(-2px);}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line);}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand-600);transform:translateY(-2px);}
+.btn svg{width:16px;height:16px;}
+
+header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(1.2) blur(10px);background:rgba(244,247,250,.78);border-bottom:1px solid var(--line);}
+.bar{display:flex;align-items:center;justify-content:space-between;height:72px;}
+.logo{height:100px;width:auto;display:block;}
+.logo-footer{height:80px;width:auto;filter:brightness(0) invert(1);}
+.bar .right{display:flex;align-items:center;gap:14px;}
+
+/* hero */
+.pc-hero{padding:80px 0 64px;position:relative;overflow:hidden;}
+.pc-hero .glow{position:absolute;right:-160px;top:-120px;width:580px;height:580px;border-radius:50%;background:radial-gradient(circle,rgba(19,146,209,.18),transparent 62%);pointer-events:none;}
+.pc-hero-inner{position:relative;z-index:1;max-width:780px;}
+.pc-hero h1{font-size:clamp(34px,5.4vw,60px);margin:18px 0 0;font-weight:700;letter-spacing:-.02em;}
+.pc-hero .lede{font-size:clamp(15px,1.9vw,18px);color:var(--ink-2);margin-top:20px;max-width:60ch;}
+
+section.block{padding:72px 0;}
+.sec-head{max-width:700px;margin-bottom:44px;}
+.sec-head h2{font-size:clamp(26px,3.4vw,38px);margin-top:14px;}
+.sec-head p{color:var(--ink-2);margin-top:14px;font-size:16px;}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;}
+.card:hover{transform:translateY(-6px);border-color:var(--brand-300);box-shadow:var(--shadow);}
+.card .ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:rgba(19,146,209,.10);color:var(--brand-600);margin-bottom:18px;}
+.card .ico svg{width:23px;height:23px;}
+.card h3{font-size:18px;}
+.card p{color:var(--ink-2);font-size:14.5px;margin-top:9px;}
+
+.dark{background:var(--ink);color:#EAF1F7;border-radius:24px;padding:54px 48px;position:relative;overflow:hidden;}
+.dark .glow{position:absolute;left:-120px;bottom:-160px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(19,146,209,.28),transparent 62%);}
+.dark .eyebrow{color:var(--brand-300);}
+.dark h2{color:#fff;font-size:clamp(24px,3.2vw,36px);margin:14px 0 30px;position:relative;z-index:1;max-width:28ch;}
+.opp{position:relative;z-index:1;display:grid;grid-template-columns:repeat(2,1fr);gap:34px;}
+.opp .lead{font-family:var(--font-display);font-weight:600;font-size:18px;color:#fff;}
+.opp .txt{color:#9FB2C2;font-size:14px;margin-top:7px;}
+
+.trial-box{margin-top:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;justify-content:space-between;}
+.trial-box .th{font-family:var(--font-display);font-weight:600;font-size:17px;}
+.trial-box .tp{color:var(--ink-2);font-size:13.5px;margin-top:6px;max-width:62ch;}
+
+.mod-row{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);}
+.mod-row:last-of-type{border-bottom:none;}
+.mod-info{flex:1;min-width:0;}
+.mod-name{font-family:var(--font-display);font-weight:600;font-size:14px;}
+.mod-desc{font-size:12.5px;color:var(--ink-2);margin-top:4px;max-width:52ch;}
+.lock-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-display);font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;flex:none;white-space:nowrap;}
+.lock-badge svg{width:13px;height:13px;}
+.lock-yes{background:rgba(22,163,74,.13);color:#15803D;}
+
+.disc-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;}
+.disc-list li{position:relative;padding-left:14px;font-size:13px;color:var(--ink-2);line-height:1.55;}
+.disc-list li::before{content:"–";position:absolute;left:0;}
+
+.pay-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.pay-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 26px;display:flex;flex-direction:column;}
+.pay-card .ptag{font-family:var(--font-display);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--brand-600);margin-bottom:6px;}
+.pay-card h3{font-size:17px;margin-bottom:4px;}
+.pay-card .psub{font-size:13px;color:var(--ink-2);margin-bottom:16px;}
+.bank-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line-2);font-size:13.5px;color:var(--ink-2);}
+.bank-row:last-child{border-bottom:none;}
+.bank-row .bv b{color:var(--ink);font-weight:600;font-family:var(--font-display);}
+
+.roadmap{display:flex;flex-direction:column;}
+.rm-step{position:relative;display:flex;gap:22px;padding-bottom:30px;}
+.rm-step:last-child{padding-bottom:0;}
+.rm-step::before{content:"";position:absolute;left:21px;top:46px;bottom:-2px;width:2px;background:var(--line);}
+.rm-step:last-child::before{display:none;}
+.rm-num{flex:none;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff;font-family:var(--font-display);font-weight:700;font-size:16px;display:grid;place-items:center;position:relative;z-index:1;box-shadow:0 8px 20px -8px rgba(19,146,209,.6);}
+.rm-body{flex:1;padding-top:5px;min-width:0;}
+.rm-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.rm-title{font-family:var(--font-display);font-weight:600;font-size:16px;}
+.rm-time{font-family:var(--font-display);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--brand-600);background:rgba(19,146,209,.08);padding:4px 10px;border-radius:999px;white-space:nowrap;}
+
+.cta-final{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;}
+.cta-final h2{font-size:clamp(28px,3.8vw,44px);}
+.cta-final .sub{color:var(--ink-2);margin-top:16px;font-size:16px;}
+.contact-list{margin-top:26px;display:flex;flex-direction:column;gap:12px;}
+.contact-list a{display:inline-flex;align-items:center;gap:11px;font-weight:500;width:fit-content;}
+.contact-list a svg{width:18px;height:18px;color:var(--brand-600);}
+.contact-list a:hover{color:var(--brand-600);}
+.aside{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow);}
+.aside .q{font-family:var(--font-display);font-weight:500;font-size:18px;line-height:1.4;}
+.aside .by{font-size:13px;color:var(--ink-2);margin-top:12px;}
+
+footer{background:var(--ink);color:#9FB2C2;padding:42px 0 36px;margin-top:84px;}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;}
+
+.fase-label{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-display);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--brand-600);background:rgba(19,146,209,.09);padding:6px 14px;border-radius:999px;margin-bottom:16px;}
+.fase-label .num{width:18px;height:18px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-size:10px;flex-shrink:0;}
+.copy-btn{flex-shrink:0;border:1px solid var(--line);background:var(--bg);color:var(--ink-2);font-family:var(--font-display);font-size:10.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:5px 9px;border-radius:6px;cursor:pointer;transition:all .15s;}
+.copy-btn:hover{border-color:var(--brand-300);color:var(--brand-600);}
+.btn-paid{display:inline-flex;align-items:center;gap:8px;background:rgba(22,163,74,.10);color:#15803D;border:1px solid rgba(22,163,74,.3);cursor:default;font-family:var(--font-display);font-weight:600;font-size:14px;padding:10px 18px;border-radius:10px;}
+.btn-paid svg{width:18px;height:18px;}
+.btn-pending{display:inline-flex;align-items:center;gap:8px;background:rgba(234,179,8,.12);color:#A16207;border:1px solid rgba(234,179,8,.4);cursor:default;font-family:var(--font-display);font-weight:600;font-size:14px;padding:10px 18px;border-radius:10px;white-space:nowrap;}
+.btn-pending svg{width:18px;height:18px;}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);}
+.reveal.in{opacity:1;transform:none;}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.26s}
+
+@media(max-width:900px){
+  .cards,.opp,.pay-grid,.cta-final{grid-template-columns:1fr;}
+  .dark{padding:38px 26px;}
+  .logo{width:33vw;max-width:160px;height:auto;}
+  .bar{height:60px;}
+  .btn{padding:10px 16px;font-size:14px;}
+  .back-lbl{display:none;}
+}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+
+/* cursor */
+@media(pointer:fine){
+  *{cursor:none!important;}
+  #cur-dot{position:fixed;width:8px;height:8px;background:var(--brand);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .1s;}
+  #cur-halo{position:fixed;width:42px;height:42px;border:2px solid rgba(19,146,209,.55);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);box-shadow:0 0 14px rgba(19,146,209,.25);}
+  .cur-trail{position:fixed;border-radius:50%;pointer-events:none;z-index:9997;transform:translate(-50%,-50%);animation:trail-out .55s ease-out forwards;}
+  @keyframes trail-out{0%{opacity:.65;width:7px;height:7px;}100%{opacity:0;width:2px;height:2px;}}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a href="index.html" aria-label="Tesistech"><img src="logo-tesistech-transparente.png" alt="Tesistech" class="logo"></a>
+    <div class="right">
+      <a class="btn btn-ghost" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M11 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="back-lbl">Propuesta principal</span>
+      </a>
+      <a class="btn btn-primary" href="#contacto">Hablemos</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="pc-hero">
+    <div class="glow"></div>
+    <div class="wrap pc-hero-inner">
+      <span class="eyebrow reveal in">Módulo adicional para Med&amp;Canna · Cotización aparte</span>
+      <h1 class="reveal in d1">El QR como extensión del producto.</h1>
+      <p class="lede reveal in d2">Cuando el cliente abre su caja, la relación cambia: ya no está evaluando si comprar — ya forma parte de Med&amp;Canna. Este módulo convierte ese momento en una experiencia de marca silenciosamente premium, sin fricción y sin registro.</p>
+    </div>
+  </section>
+
+  <!-- DOS ESTADOS -->
+  <section class="block" style="padding-top:0;">
+    <div class="wrap">
+      <div class="dark reveal">
+        <div class="glow"></div>
+        <span class="eyebrow">Una página, dos estados</span>
+        <h2>El QR no abre una página diferente. Abre una versión diferente de la misma historia.</h2>
+        <div class="opp">
+          <div>
+            <div class="lead">Visitante · antes de comprar</div>
+            <div class="txt">Descripción, beneficios, ingredientes, COA público del lote vigente y compra. Su objetivo es generar confianza y acompañar la decisión. <em style="color:#74C2EC;">Esta capa ya existe en el sitio — no requiere desarrollo adicional.</em></div>
+          </div>
+          <div>
+            <div class="lead">Propietario · después de abrir la caja</div>
+            <div class="txt">Bienvenida a la experiencia Med&amp;Canna. Confirmación de autenticidad. Información del lote. COA específico. Ritual de uso y consejos. Todo visible al instante — sin pedir correo, sin pedir registro, sin pedir nada.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section class="block" style="padding-top:0;">
+    <div class="wrap">
+      <div class="trial-box reveal">
+        <div>
+          <div class="th">QR por lote — cómo funciona</div>
+          <div class="tp">Cada lote de producción tiene su propio QR, impreso en la tarjeta que acompaña la caja. Ese QR apunta a una URL exclusiva del lote — fuera del menú del sitio, sin aparecer en buscadores ni en el sitemap. Al escanear, la página carga automáticamente la información de ese lote: su COA, su fecha de fabricación, su formulación. Si mañana cambia la formulación, cada cliente seguirá viendo la información exacta del lote que tiene en sus manos. Tesistech entrega los QRs listos para imprenta en cada producción — proceso documentado y repetible.</div>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="1.5" width="52" height="52" style="flex:none;opacity:.9;"><rect x="2" y="2" width="8" height="8" rx="1.2"/><rect x="14" y="2" width="8" height="8" rx="1.2"/><rect x="2" y="14" width="8" height="8" rx="1.2"/><path d="M14 14h2.5v2.5H14zM18.5 14H22M14 18.5V22M18.5 18.5H22v3.5h-3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALCANCE DEL MÓDULO -->
+  <section class="block" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Alcance del módulo</span>
+        <h2>5 entregables. Un solo pago.</h2>
+        <p>Todo lo que Tesistech construye y entrega en este módulo, sin costos mensuales adicionales.</p>
+      </div>
+      <div class="card reveal" style="padding:8px 26px 4px;margin-bottom:20px;">
+        <div class="mod-row">
+          <div class="mod-info">
+            <div class="mod-name">1 · Arquitectura de lotes</div>
+            <div class="mod-desc">Estructura de datos en Shopify para registrar cada lote: número, fecha de fabricación, formulación, COA y ritual. Gestionable desde el Admin sin tocar código.</div>
+          </div>
+          <span class="lock-badge lock-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" style="width:13px;height:13px;"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Incluido</span>
+        </div>
+        <div class="mod-row">
+          <div class="mod-info">
+            <div class="mod-name">2 · Experiencia del propietario</div>
+            <div class="mod-desc">Plantilla premium con el sistema de diseño Med&amp;Canna: bienvenida, autenticidad, lote, COA, ritual y consejos. Un solo diseño elegante que funciona para todas las líneas (Aura, Nocturne, Invictus, Zenith, Animalia).</div>
+          </div>
+          <span class="lock-badge lock-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" style="width:13px;height:13px;"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Incluido</span>
+        </div>
+        <div class="mod-row">
+          <div class="mod-info">
+            <div class="mod-name">3 · URLs exclusivas por lote</div>
+            <div class="mod-desc">Direcciones fuera de navegación, buscadores y sitemap. Solo accesibles desde el QR — solo quien tiene la caja puede llegar ahí.</div>
+          </div>
+          <span class="lock-badge lock-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" style="width:13px;height:13px;"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Incluido</span>
+        </div>
+        <div class="mod-row">
+          <div class="mod-info">
+            <div class="mod-name">4 · Generación de QRs</div>
+            <div class="mod-desc">Códigos QR por lote en alta resolución, listos para entregar a imprenta. Incluye proceso documentado para que futuros lotes sean un flujo simple y repetible.</div>
+          </div>
+          <span class="lock-badge lock-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" style="width:13px;height:13px;"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Incluido</span>
+        </div>
+        <div class="mod-row">
+          <div class="mod-info">
+            <div class="mod-name">5 · Multiidioma — Español e Inglés</div>
+            <div class="mod-desc">La experiencia del propietario disponible en español e inglés, con SEO por idioma — ideal para clientes internacionales en PV, Cabos y Cancún.</div>
+          </div>
+          <span class="lock-badge lock-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" style="width:13px;height:13px;"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Incluido</span>
+        </div>
+        <div class="mod-row" style="border-bottom:none;">
+          <div class="mod-info">
+            <div class="mod-name">6 · Pruebas y calidad</div>
+            <div class="mod-desc">Validación completa en móvil y escritorio — la experiencia se vive principalmente desde el teléfono, recién abierta la caja.</div>
+          </div>
+          <span class="lock-badge lock-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" style="width:13px;height:13px;"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Incluido</span>
+        </div>
+      </div>
+
+      <!-- Fuera de alcance -->
+      <div class="card reveal">
+        <h3 style="font-size:15px;margin-bottom:14px;">Fuera de alcance</h3>
+        <ul class="disc-list">
+          <li>Redacción del contenido de rituales y consejos (Med&amp;Canna provee los textos; Tesistech los integra)</li>
+          <li>Generación de los COAs (documentos del laboratorio)</li>
+          <li>Diseño gráfico de las tarjetas físicas (los QRs se entregan listos para que el diseñador los coloque)</li>
+          <li>Fotografía y video</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGUIENTE CAPÍTULO -->
+  <section class="block" style="padding-top:0;">
+    <div class="wrap">
+      <div class="dark reveal">
+        <div class="glow"></div>
+        <span class="eyebrow">Siguiente capítulo · Fase 2</span>
+        <h2>La Colección Med&amp;Canna.</h2>
+        <div class="opp">
+          <div>
+            <div class="txt" style="font-size:14.5px;line-height:1.75;">Una vez que el QR esté en las cajas, la experiencia puede crecer hacia su segunda capa: invitar al propietario — de forma natural, después de recibir todo el valor — a guardar su producto en su colección personal.</div>
+          </div>
+          <div>
+            <div class="lead">"¿Deseas guardar este producto en tu colección Med&amp;Canna?"</div>
+            <div class="txt" style="margin-top:10px;">Su cuenta se convierte en un registro de experiencias: cuándo comenzó con Med&amp;Canna, qué productos ha probado, qué lote y formulación fue cada uno. No una cuenta que se crea — una colección que se construye.</div>
+            <div style="margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.12);font-size:12px;color:#9FB2C2;font-family:var(--font-display);">Inversión estimada Fase 2: $12,000 – $16,000 MXN · se cotiza formalmente a su tiempo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INVERSIÓN + TIEMPOS -->
+  <section class="block" style="padding-top:0;">
+    <div class="wrap">
+      <div class="pay-grid reveal">
+        <div class="pay-card">
+          <div class="ptag">Inversión · pago único</div>
+          <h3 style="font-size:30px;margin-bottom:6px;">$9,765 MXN</h3>
+          <p class="psub">Sin costos mensuales adicionales — solución 100% nativa de Shopify. El único costo recurrente es la impresión de las tarjetas, que ya forma parte del empaque.</p>
+          <div class="bank-row">
+            <span>Al firmar (50%)</span>
+            <span class="bv"><b>$4,882 MXN</b></span>
+          </div>
+          <div class="bank-row" style="border-bottom:none;">
+            <span>Contra entrega (50%)</span>
+            <span class="bv"><b>$4,883 MXN</b></span>
+          </div>
+          <p style="font-size:11.5px;color:var(--ink-2);margin-top:14px;line-height:1.5;">Cotización vigente por 30 días. Incluye dos rondas de revisión.</p>
+          <a class="btn btn-primary" href="#contacto" style="margin-top:auto;padding-top:18px;justify-content:center;">Hablemos de este módulo
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="pay-card">
+          <div class="ptag">Tiempos · a partir del anticipo</div>
+          <h3 style="margin-bottom:6px;">2 – 3 semanas</h3>
+          <p class="psub">Desde que se recibe el primer lote de contenidos: datos del lote piloto, COA y ritual de al menos un producto.</p>
+          <div class="roadmap" style="margin-top:20px;">
+            <div class="rm-step">
+              <div class="rm-num">1</div>
+              <div class="rm-body">
+                <div class="rm-head">
+                  <span class="rm-title">Arquitectura de lotes + URLs exclusivas</span>
+                  <span class="rm-time">Semana 1</span>
+                </div>
+              </div>
+            </div>
+            <div class="rm-step">
+              <div class="rm-num">2</div>
+              <div class="rm-body">
+                <div class="rm-head">
+                  <span class="rm-title">Experiencia propietario con contenido real</span>
+                  <span class="rm-time">Semana 2</span>
+                </div>
+              </div>
+            </div>
+            <div class="rm-step" style="padding-bottom:0;">
+              <div class="rm-num">3</div>
+              <div class="rm-body">
+                <div class="rm-head">
+                  <span class="rm-title">QRs generados, pruebas finales y entrega</span>
+                  <span class="rm-time">Semana 3</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DATOS DE PAGO -->
+  <section class="block" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head reveal" style="margin-bottom:24px;">
+        <span class="eyebrow">Cómo pagar</span>
+        <h2>Arrancar es así de fácil.</h2>
+        <p>Cubre el anticipo de $4,900 MXN para arrancar y el resto se paga contra entrega del módulo.</p>
+      </div>
+
+      <div class="fase-label"><span class="num">1</span>Anticipo al firmar · $4,882 MXN</div>
+      <div class="pay-card reveal d1" style="margin-bottom:20px;">
+        <div class="ptag">Transferencia bancaria</div>
+        <h3>Datos de pago</h3>
+        <p class="psub">Para cubrir el anticipo y arrancar el módulo.</p>
+        <div class="bank-row">
+          <span>CLABE</span>
+          <span class="bv"><b id="clabeVal">722969040898120238</b><button class="copy-btn" id="copyClabe" type="button">Copiar</button></span>
+        </div>
+        <div class="bank-row">
+          <span>Beneficiario</span>
+          <span class="bv"><b>Luis Alejandro Hernández Rentería</b></span>
+        </div>
+        <div class="bank-row" style="border-bottom:none;">
+          <span>Institución</span>
+          <span class="bv"><b>Mercado Pago W</b></span>
+        </div>
+      </div>
+
+      <div class="fase-label"><span class="num">2</span>Contra entrega · $4,883 MXN</div>
+      <div class="trial-box reveal d2">
+        <div>
+          <div class="th">Pago final al entregar el módulo</div>
+          <div class="tp">Una vez que el módulo esté probado y entregado — QRs en mano, experiencia en vivo — se cubre el segundo y último pago por los mismos medios.</div>
+        </div>
+        <span class="btn-pending">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Pendiente de entrega
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="block" id="contacto">
+    <div class="wrap cta-final">
+      <div class="reveal">
+        <span class="eyebrow">Hablemos, Santiago</span>
+        <h2>¿Le damos vida a la experiencia post-compra de Med&amp;Canna?</h2>
+        <p class="sub">Cuéntanos en qué lote quieren empezar y armamos el plan. Nosotros ponemos la arquitectura, la experiencia y los QRs — tú pones el contenido de tus rituales.</p>
+        <div class="contact-list">
+          <a href="https://wa.me/message/F6HBJHEAHJENM1"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.1-1.3A10 10 0 1 0 12 2z"/></svg>WhatsApp directo</a>
+          <a href="mailto:hola@tesistech.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6" stroke-linecap="round"/></svg>hola@tesistech.com</a>
+          <a href="https://www.tesistech.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18" stroke-linecap="round"/></svg>tesistech.com</a>
+        </div>
+      </div>
+      <div class="aside reveal d1">
+        <div class="q">"El QR no abre una página diferente. Abre una versión diferente de la misma historia."</div>
+        <div class="by">— Concepto de la experiencia post-compra · Tesistech para Med&amp;Canna</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <img src="logo-tesistech-transparente.png" alt="Tesistech" class="logo-footer">
+    </div>
+    <div style="font-size:13px;">Propuesta confidencial para Med&amp;Canna · © <span id="y"></span> Tesistech</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  const copyClabe = document.getElementById('copyClabe');
+  if (copyClabe) {
+    copyClabe.addEventListener('click', () => {
+      navigator.clipboard.writeText(document.getElementById('clabeVal').textContent).then(() => {
+        const t = copyClabe.textContent; copyClabe.textContent = '¡Copiado!';
+        setTimeout(() => copyClabe.textContent = t, 1500);
+      }).catch(() => {});
+    });
+  }
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: .12 });
+  document.querySelectorAll('.reveal:not(.in)').forEach(el => io.observe(el));
+
+  if (window.matchMedia('(pointer:fine)').matches) {
+    const dot = document.createElement('div'); dot.id = 'cur-dot';
+    const halo = document.createElement('div'); halo.id = 'cur-halo';
+    document.body.append(dot, halo);
+    let mx = -200, my = -200, hx = -200, hy = -200, lastT = 0;
+    const COLORS = ['rgba(19,146,209,.7)', 'rgba(116,194,236,.7)', 'rgba(14,118,171,.6)'];
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      dot.style.cssText += `left:${mx}px;top:${my}px;`;
+      const now = Date.now();
+      if (now - lastT > 28) {
+        lastT = now;
+        const p = document.createElement('div');
+        p.className = 'cur-trail';
+        p.style.cssText = `left:${mx}px;top:${my}px;background:${COLORS[Math.random() * 3 | 0]};`;
+        document.body.appendChild(p);
+        setTimeout(() => p.remove(), 560);
+      }
+    });
+    (function tick() {
+      hx += (mx - hx) * .11; hy += (my - hy) * .11;
+      halo.style.cssText = `left:${hx}px;top:${hy}px;`;
+      requestAnimationFrame(tick);
+    })();
+  }
+</script>
+</body>
+</html>
