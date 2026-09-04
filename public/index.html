@@ -179,6 +179,22 @@ section.block{padding:84px 0;}
 .aside .q{font-family:var(--font-display);font-weight:500;font-size:18px;line-height:1.4;}
 .aside .by{font-size:13px;color:var(--ink-2);margin-top:12px;}
 
+/* planes de pauta (fase 2) */
+.plans{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;align-items:start;}
+.plan{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;}
+.plan:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+.plan.feat{border-color:var(--brand);box-shadow:var(--shadow);}
+.plan-tag{position:absolute;top:-13px;left:28px;font-family:var(--font-display);font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--brand);padding:6px 13px;border-radius:999px;box-shadow:0 8px 18px -8px rgba(19,146,209,.75);}
+.plan h3{font-size:23px;}
+.plan .psub{color:var(--ink-2);font-size:13.5px;margin-top:9px;max-width:46ch;}
+.plan .price{font-family:var(--font-display);font-weight:700;font-size:clamp(32px,4vw,40px);letter-spacing:-.02em;margin-top:22px;display:flex;align-items:baseline;gap:9px;}
+.plan .price small{font-family:var(--font-body);font-weight:500;font-size:13px;color:var(--ink-2);letter-spacing:0;}
+.plan-list{list-style:none;margin:24px 0 0;padding:24px 0 0;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:11px;}
+.plan-list li{position:relative;padding-left:26px;font-size:13.5px;color:var(--ink-2);line-height:1.5;}
+.plan-list li::before{content:"";position:absolute;left:0;top:4px;width:12px;height:12px;border-radius:50%;border:1.5px solid var(--brand-300);}
+.plans-note{color:var(--ink-2);font-size:13px;margin-top:22px;text-align:center;}
+.plans-note b{color:var(--ink);font-weight:600;}
+
 footer{background:var(--ink);color:#9FB2C2;padding:42px 0 36px;margin-top:84px;}
 footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;}
 .brandmark{display:flex;align-items:center;gap:12px;color:#fff;font-family:var(--font-display);font-weight:700;font-size:18px;letter-spacing:.12em;}
@@ -189,7 +205,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
 .d1{transition-delay:.06s}.d2{transition-delay:.14s}.d3{transition-delay:.24s}.d4{transition-delay:.34s}
 
 @media (max-width:900px){
-  .cards,.opp,.config,.cta-final,.fases-grid,.pay-grid{grid-template-columns:1fr;}
+  .cards,.opp,.config,.cta-final,.fases-grid,.pay-grid,.plans{grid-template-columns:1fr;}
   .ring,.hero .glow{opacity:.3;}
   .dark,.results{padding:38px 26px;}
   /* header mobile */
@@ -517,7 +533,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
           <button class="btn btn-primary" id="downloadBtn" type="button">Descargar propuesta
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <div class="disc">Precios en MXN, IVA incluido. La gestión mensual (fase 2) se cotiza por separado cuando arranque.</div>
+          <div class="disc">Precios en MXN, IVA incluido. La gestión mensual de pauta (fase 2) va aparte, con sus planes detallados abajo.</div>
           <ul class="disc-list">
             <li>Suscripción mensual de Shopify — la paga directo Med&amp;Canna a Shopify, no incluida aquí.</li>
             <li>Dominio y su renovación anual — aparte.</li>
@@ -619,7 +635,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
       <div class="sec-head reveal">
         <span class="eyebrow">Fase 2 · cuando arranque el crecimiento</span>
         <h2>Lo que activamos para hacer crecer a Med&amp;Canna.</h2>
-        <p>Una vez que la tienda esté en línea y el inventario listo, esta es la gestión mensual que ponemos a trabajar — se cotiza por separado en su momento, no es parte de esta propuesta.</p>
+        <p>Una vez que la tienda esté en línea y el inventario listo, esta es la gestión mensual que ponemos a trabajar. Va aparte del setup de esta propuesta — los planes y sus precios están justo abajo.</p>
       </div>
       <div class="cards">
         <div class="card reveal">
@@ -658,6 +674,48 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
           <p>Vende a tu base y recupera carritos con correos que convierten.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ PLANES DE PAUTA (META ADS) ============ -->
+  <!-- ✏️ PRECIO — mensualidades de gestión de pauta en .price -->
+  <section class="block" id="pauta" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Gestión mensual · Meta Ads</span>
+        <h2>Meta Ads, gestionado para vender.</h2>
+        <p>Cuando la tienda esté lista, la pauta enciende el motor. Dos niveles de gestión para elegir a qué velocidad escala la inversión.</p>
+      </div>
+
+      <div class="plans">
+        <div class="plan reveal">
+          <h3>Crecimiento</h3>
+          <p class="psub">Para generar las primeras ventas recurrentes y medir qué funciona.</p>
+          <div class="price">$5,900 <small>MXN / mes</small></div>
+          <ul class="plan-list">
+            <li>Meta Ads gestionado — Facebook + Instagram</li>
+            <li>Optimización quincenal · reporte mensual con ROAS</li>
+            <li>Targeting por intereses: wellness, CBD premium y lifestyle</li>
+            <li>Creativos armados con tu contenido y catálogo bilingüe ES/EN</li>
+          </ul>
+        </div>
+
+        <div class="plan feat reveal d1">
+          <span class="plan-tag">Recomendado para escalar</span>
+          <h3>Autopilot</h3>
+          <p class="psub">El sistema completo para capturar tráfico nuevo y recompra en paralelo.</p>
+          <div class="price">$7,900 <small>MXN / mes</small></div>
+          <ul class="plan-list">
+            <li>Embudo completo: prospección + retargeting + públicos similares</li>
+            <li>Email automation — recuperación de carrito, recompra y La Cava</li>
+            <li>Estrategia dedicada · reporte semanal de ventas y ROAS</li>
+            <li>Coordinación de contenido/UGC y reunión mensual de resultados</li>
+            <li>Setup incluido: auditoría de cuenta + implementación CAPI</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="plans-note reveal">+ tu inversión en pauta (Meta) va directo a la plataforma — <b>tú la controlas, nosotros la optimizamos.</b></p>
     </div>
   </section>
 
@@ -785,7 +843,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
       'Apps de terceros que se decida instalar (envíos, reviews, etc.).',
       'Comisión de la pasarela de pago por transacción.',
       'Inversión en pauta (Meta Ads).',
-      'Gestión mensual de Fase 2 (campañas, contenido, reportes) — se cotiza por separado cuando arranque.',
+      'Gestión mensual de Fase 2 (Meta Ads, contenido, reportes) — planes desde $5,900 MXN/mes, aparte del setup.',
     ];
 
     const TERMINOS=[
